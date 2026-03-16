@@ -23,7 +23,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-glass">
+    <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <a href="#" className="text-xl font-extrabold tracking-tight glow-text text-primary">
           L34f4r <span className="text-foreground font-medium">Integrações</span>
@@ -42,9 +42,9 @@ export default function Header() {
           ))}
           <Button
             className="glow-hover"
-            onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+            onClick={() => window.open('https://wa.me/5521967578095', '_blank')}
           >
-            Diagnóstico Gratuito
+            Diagnóstico Gratuito de Automação
           </Button>
         </nav>
 
@@ -71,9 +71,9 @@ export default function Header() {
                 ))}
                 <Button
                   className="w-full mt-4 glow-hover"
-                  onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+                  onClick={() => window.open('https://wa.me/5521967578095', '_blank')}
                 >
-                  Diagnóstico Gratuito
+                  Diagnóstico Gratuito de Automação
                 </Button>
               </nav>
             </SheetContent>

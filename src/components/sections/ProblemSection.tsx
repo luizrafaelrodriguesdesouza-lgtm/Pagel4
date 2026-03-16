@@ -14,7 +14,7 @@ export function ProblemSection() {
     },
     {
       icon: Clock,
-      title: 'Atendimento Lento',
+      title: 'Demora no Atendimento',
       description:
         'Gargalos no WhatsApp geram frustração. Sua equipe perde tempo com tarefas repetitivas em vez de fechar vendas.',
     },

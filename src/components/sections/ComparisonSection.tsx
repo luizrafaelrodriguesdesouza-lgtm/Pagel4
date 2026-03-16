@@ -13,15 +13,10 @@ export function ComparisonSection() {
   const { ref, isVisible } = useScrollAnimation()
 
   const comparisonData = [
-    { feature: 'Atendimento', manual: 'Apenas horário comercial', automated: 'Instantâneo 24/7' },
-    { feature: 'Qualificação', manual: 'Subjetiva e lenta', automated: 'Padronizada por IA' },
-    { feature: 'Gestão de Dados', manual: 'Planilhas soltas', automated: 'CRM sempre atualizado' },
-    { feature: 'Custo de Escala', manual: 'Alto (contratações)', automated: 'Baixo e previsível' },
-    {
-      feature: 'Risco de Erro',
-      manual: 'Alto risco humano',
-      automated: 'Processos à prova de falhas',
-    },
+    { feature: 'Desempenho', manual: 'Lenta', automated: 'Escalável' },
+    { feature: 'Precisão', manual: 'Erros frequentes', automated: 'Precisão total' },
+    { feature: 'Financeiro', manual: 'Custo variável alto', automated: 'ROI previsível' },
+    { feature: 'Disponibilidade', manual: 'Dependência humana', automated: 'Funcionamento 24/7' },
   ]
 
   return (

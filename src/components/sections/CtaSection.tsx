@@ -10,7 +10,7 @@ export function CtaSection() {
   const handleCtaClick = () => {
     setIsLoading(true)
     setTimeout(() => {
-      window.open('https://wa.me/1234567890', '_blank')
+      window.open('https://wa.me/5521967578095', '_blank')
       setIsLoading(false)
     }, 800)
   }
@@ -44,7 +44,7 @@ export function CtaSection() {
             disabled={isLoading}
           >
             {isLoading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null}
-            Solicitar Diagnóstico Gratuito agora
+            Diagnóstico Gratuito de Automação
             {!isLoading && (
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             )}

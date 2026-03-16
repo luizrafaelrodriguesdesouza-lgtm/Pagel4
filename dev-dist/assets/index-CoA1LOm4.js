@@ -24469,8 +24469,8 @@ function HeroSection() {
 						"data-prohibitions": "[]",
 						size: "lg",
 						className: "h-14 px-8 text-lg glow-hover w-full sm:w-auto",
-						onClick: () => window.open("https://wa.me/1234567890", "_blank"),
-						children: ["Quero Minha Máquina de Vendas", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+						onClick: () => window.open("https://wa.me/5521967578095", "_blank"),
+						children: ["Diagnóstico Gratuito de Automação", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
 							"data-uid": "src/components/sections/HeroSection.tsx:48:13",
 							"data-prohibitions": "[editContent]",
 							className: "ml-2 h-5 w-5"
@@ -24569,7 +24569,7 @@ function ProblemSection() {
 		},
 		{
 			icon: Clock,
-			title: "Atendimento Lento",
+			title: "Demora no Atendimento",
 			description: "Gargalos no WhatsApp geram frustração. Sua equipe perde tempo com tarefas repetitivas em vez de fechar vendas."
 		},
 		{
@@ -24783,7 +24783,7 @@ function SolutionSection() {
 											"data-uid": "src/components/sections/SolutionSection.tsx:58:19",
 											"data-prohibitions": "[]",
 											className: "text-xl font-semibold mb-2",
-											children: "Integração Total"
+											children: "CRM Atualizado"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 											"data-uid": "src/components/sections/SolutionSection.tsx:59:19",
 											"data-prohibitions": "[]",
@@ -24984,91 +24984,86 @@ function ComparisonSection() {
 	const { ref, isVisible } = useScrollAnimation();
 	const comparisonData = [
 		{
-			feature: "Atendimento",
-			manual: "Apenas horário comercial",
-			automated: "Instantâneo 24/7"
+			feature: "Desempenho",
+			manual: "Lenta",
+			automated: "Escalável"
 		},
 		{
-			feature: "Qualificação",
-			manual: "Subjetiva e lenta",
-			automated: "Padronizada por IA"
+			feature: "Precisão",
+			manual: "Erros frequentes",
+			automated: "Precisão total"
 		},
 		{
-			feature: "Gestão de Dados",
-			manual: "Planilhas soltas",
-			automated: "CRM sempre atualizado"
+			feature: "Financeiro",
+			manual: "Custo variável alto",
+			automated: "ROI previsível"
 		},
 		{
-			feature: "Custo de Escala",
-			manual: "Alto (contratações)",
-			automated: "Baixo e previsível"
-		},
-		{
-			feature: "Risco de Erro",
-			manual: "Alto risco humano",
-			automated: "Processos à prova de falhas"
+			feature: "Disponibilidade",
+			manual: "Dependência humana",
+			automated: "Funcionamento 24/7"
 		}
 	];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"data-uid": "src/components/sections/ComparisonSection.tsx:28:5",
+		"data-uid": "src/components/sections/ComparisonSection.tsx:23:5",
 		"data-prohibitions": "[editContent]",
 		id: "comparativo",
 		className: "py-24 bg-zinc-950 border-t border-border/20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/ComparisonSection.tsx:29:7",
+			"data-uid": "src/components/sections/ComparisonSection.tsx:24:7",
 			"data-prohibitions": "[editContent]",
 			ref,
 			className: `container px-4 mx-auto max-w-4xl transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`,
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/ComparisonSection.tsx:35:9",
+				"data-uid": "src/components/sections/ComparisonSection.tsx:30:9",
 				"data-prohibitions": "[]",
 				className: "text-center mb-16",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-					"data-uid": "src/components/sections/ComparisonSection.tsx:36:11",
+					"data-uid": "src/components/sections/ComparisonSection.tsx:31:11",
 					"data-prohibitions": "[]",
 					className: "text-3xl md:text-5xl font-extrabold tracking-tight mb-4",
 					children: ["Operação Manual vs. ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/sections/ComparisonSection.tsx:37:33",
+						"data-uid": "src/components/sections/ComparisonSection.tsx:32:33",
 						"data-prohibitions": "[]",
 						className: "text-primary",
 						children: "L34f4r"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/ComparisonSection.tsx:39:11",
+					"data-uid": "src/components/sections/ComparisonSection.tsx:34:11",
 					"data-prohibitions": "[]",
 					className: "text-muted-foreground text-lg",
 					children: "Veja como a automação transforma cada aspecto do seu processo comercial."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				"data-uid": "src/components/sections/ComparisonSection.tsx:44:9",
+				"data-uid": "src/components/sections/ComparisonSection.tsx:39:9",
 				"data-prohibitions": "[editContent]",
 				className: "border border-border/50 rounded-xl overflow-hidden bg-zinc-900/30 glow-hover",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Table, {
-					"data-uid": "src/components/sections/ComparisonSection.tsx:45:11",
+					"data-uid": "src/components/sections/ComparisonSection.tsx:40:11",
 					"data-prohibitions": "[editContent]",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHeader, {
-						"data-uid": "src/components/sections/ComparisonSection.tsx:46:13",
+						"data-uid": "src/components/sections/ComparisonSection.tsx:41:13",
 						"data-prohibitions": "[]",
 						className: "bg-zinc-900",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-							"data-uid": "src/components/sections/ComparisonSection.tsx:47:15",
+							"data-uid": "src/components/sections/ComparisonSection.tsx:42:15",
 							"data-prohibitions": "[]",
 							className: "border-border/50 hover:bg-transparent",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-									"data-uid": "src/components/sections/ComparisonSection.tsx:48:17",
+									"data-uid": "src/components/sections/ComparisonSection.tsx:43:17",
 									"data-prohibitions": "[]",
 									className: "w-[30%] text-foreground font-semibold py-4",
 									children: "Característica"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-									"data-uid": "src/components/sections/ComparisonSection.tsx:51:17",
+									"data-uid": "src/components/sections/ComparisonSection.tsx:46:17",
 									"data-prohibitions": "[]",
 									className: "w-[35%] text-muted-foreground font-semibold py-4 border-l border-border/50",
 									children: "Operação Manual"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-									"data-uid": "src/components/sections/ComparisonSection.tsx:54:17",
+									"data-uid": "src/components/sections/ComparisonSection.tsx:49:17",
 									"data-prohibitions": "[]",
 									className: "w-[35%] text-primary font-bold py-4 border-l border-border/50 bg-primary/5",
 									children: "Operação com L34f4r"
@@ -25076,44 +25071,44 @@ function ComparisonSection() {
 							]
 						})
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableBody, {
-						"data-uid": "src/components/sections/ComparisonSection.tsx:59:13",
+						"data-uid": "src/components/sections/ComparisonSection.tsx:54:13",
 						"data-prohibitions": "[editContent]",
 						children: comparisonData.map((row, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-							"data-uid": "src/components/sections/ComparisonSection.tsx:61:17",
+							"data-uid": "src/components/sections/ComparisonSection.tsx:56:17",
 							"data-prohibitions": "[editContent]",
 							className: "border-border/20 hover:bg-zinc-800/50 transition-colors",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-									"data-uid": "src/components/sections/ComparisonSection.tsx:65:19",
+									"data-uid": "src/components/sections/ComparisonSection.tsx:60:19",
 									"data-prohibitions": "[editContent]",
 									className: "font-medium py-4",
 									children: row.feature
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-									"data-uid": "src/components/sections/ComparisonSection.tsx:66:19",
+									"data-uid": "src/components/sections/ComparisonSection.tsx:61:19",
 									"data-prohibitions": "[editContent]",
 									className: "text-muted-foreground border-l border-border/20 py-4",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/ComparisonSection.tsx:67:21",
+										"data-uid": "src/components/sections/ComparisonSection.tsx:62:21",
 										"data-prohibitions": "[editContent]",
 										className: "flex items-center gap-2",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleX, {
-											"data-uid": "src/components/sections/ComparisonSection.tsx:68:23",
+											"data-uid": "src/components/sections/ComparisonSection.tsx:63:23",
 											"data-prohibitions": "[editContent]",
 											className: "w-4 h-4 text-destructive/70 flex-shrink-0"
 										}), row.manual]
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-									"data-uid": "src/components/sections/ComparisonSection.tsx:72:19",
+									"data-uid": "src/components/sections/ComparisonSection.tsx:67:19",
 									"data-prohibitions": "[editContent]",
 									className: "text-foreground font-medium border-l border-border/20 py-4 bg-primary/5",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/ComparisonSection.tsx:73:21",
+										"data-uid": "src/components/sections/ComparisonSection.tsx:68:21",
 										"data-prohibitions": "[editContent]",
 										className: "flex items-center gap-2",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-											"data-uid": "src/components/sections/ComparisonSection.tsx:74:23",
+											"data-uid": "src/components/sections/ComparisonSection.tsx:69:23",
 											"data-prohibitions": "[editContent]",
 											className: "w-4 h-4 text-primary flex-shrink-0"
 										}), row.automated]
@@ -25733,7 +25728,7 @@ function CtaSection() {
 	const handleCtaClick = () => {
 		setIsLoading(true);
 		setTimeout(() => {
-			window.open("https://wa.me/1234567890", "_blank");
+			window.open("https://wa.me/5521967578095", "_blank");
 			setIsLoading(false);
 		}, 800);
 	};
@@ -25790,7 +25785,7 @@ function CtaSection() {
 								"data-prohibitions": "[editContent]",
 								className: "mr-2 h-5 w-5 animate-spin"
 							}) : null,
-							"Solicitar Diagnóstico Gratuito agora",
+							"Diagnóstico Gratuito de Automação",
 							!isLoading && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
 								"data-uid": "src/components/sections/CtaSection.tsx:49:15",
 								"data-prohibitions": "[editContent]",
@@ -27307,7 +27302,7 @@ function Header() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
 		"data-uid": "src/components/Header.tsx:26:5",
 		"data-prohibitions": "[editContent]",
-		className: "fixed top-0 z-50 w-full bg-glass",
+		className: "fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/Header.tsx:27:7",
 			"data-prohibitions": "[editContent]",
@@ -27340,8 +27335,8 @@ function Header() {
 						"data-uid": "src/components/Header.tsx:43:11",
 						"data-prohibitions": "[]",
 						className: "glow-hover",
-						onClick: () => window.open("https://wa.me/1234567890", "_blank"),
-						children: "Diagnóstico Gratuito"
+						onClick: () => window.open("https://wa.me/5521967578095", "_blank"),
+						children: "Diagnóstico Gratuito de Automação"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -27398,8 +27393,8 @@ function Header() {
 									"data-uid": "src/components/Header.tsx:72:17",
 									"data-prohibitions": "[]",
 									className: "w-full mt-4 glow-hover",
-									onClick: () => window.open("https://wa.me/1234567890", "_blank"),
-									children: "Diagnóstico Gratuito"
+									onClick: () => window.open("https://wa.me/5521967578095", "_blank"),
+									children: "Diagnóstico Gratuito de Automação"
 								})]
 							})]
 						})]
@@ -27471,7 +27466,7 @@ function FloatingWhatsApp() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 		"data-uid": "src/components/FloatingWhatsApp.tsx:5:5",
 		"data-prohibitions": "[]",
-		href: "https://wa.me/1234567890",
+		href: "https://wa.me/5521967578095",
 		target: "_blank",
 		rel: "noreferrer",
 		className: "fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-110",
@@ -27594,4 +27589,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 }));
 //#endregion
 
-//# sourceMappingURL=index-CJHrL1_P.js.map
+//# sourceMappingURL=index-CoA1LOm4.js.map

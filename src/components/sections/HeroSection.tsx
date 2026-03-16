@@ -42,9 +42,9 @@ export function HeroSection() {
           <Button
             size="lg"
             className="h-14 px-8 text-lg glow-hover w-full sm:w-auto"
-            onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+            onClick={() => window.open('https://wa.me/5521967578095', '_blank')}
           >
-            Quero Minha Máquina de Vendas
+            Diagnóstico Gratuito de Automação
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
