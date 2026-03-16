@@ -1,5 +1,5 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import { MessageSquareFast, BrainCircuit, Blocks } from 'lucide-react'
+import { MessageSquare, BrainCircuit, Blocks } from 'lucide-react'
 
 export function SolutionSection() {
   const { ref, isVisible } = useScrollAnimation()
@@ -27,7 +27,7 @@ export function SolutionSection() {
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary">
-                  <MessageSquareFast className="w-6 h-6" />
+                  <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Atendimento Instantâneo</h3>
