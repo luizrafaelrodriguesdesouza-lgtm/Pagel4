@@ -10,7 +10,10 @@ export function CtaSection() {
   const handleCtaClick = () => {
     setIsLoading(true)
     setTimeout(() => {
-      window.open('https://wa.me/5521967578095', '_blank')
+      window.open(
+        'https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o',
+        '_blank',
+      )
       setIsLoading(false)
     }, 800)
   }

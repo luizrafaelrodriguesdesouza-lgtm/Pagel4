@@ -19028,6 +19028,15 @@ var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "m12 5 7 7-7 7",
 	key: "xquz4c"
 }]]);
+var Ban = createLucideIcon("ban", [["circle", {
+	cx: "12",
+	cy: "12",
+	r: "10",
+	key: "1mglay"
+}], ["path", {
+	d: "M4.929 4.929 19.07 19.071",
+	key: "196cmz"
+}]]);
 var Blocks = createLucideIcon("blocks", [["path", {
 	d: "M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2",
 	key: "1ah6g2"
@@ -19232,6 +19241,47 @@ var MessageCircle = createLucideIcon("message-circle", [["path", {
 var MessageSquare = createLucideIcon("message-square", [["path", {
 	d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z",
 	key: "18887p"
+}]]);
+var Server = createLucideIcon("server", [
+	["rect", {
+		width: "20",
+		height: "8",
+		x: "2",
+		y: "2",
+		rx: "2",
+		ry: "2",
+		key: "ngkwjq"
+	}],
+	["rect", {
+		width: "20",
+		height: "8",
+		x: "2",
+		y: "14",
+		rx: "2",
+		ry: "2",
+		key: "iecqi9"
+	}],
+	["line", {
+		x1: "6",
+		x2: "6.01",
+		y1: "6",
+		y2: "6",
+		key: "16zg32"
+	}],
+	["line", {
+		x1: "6",
+		x2: "6.01",
+		y1: "18",
+		y2: "18",
+		key: "nzw8ys"
+	}]
+]);
+var ShieldCheck = createLucideIcon("shield-check", [["path", {
+	d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+	key: "oel41y"
+}], ["path", {
+	d: "m9 12 2 2 4-4",
+	key: "dzmm74"
 }]]);
 var Unlink = createLucideIcon("unlink", [
 	["path", {
@@ -24382,102 +24432,143 @@ function HeroSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		"data-uid": "src/components/sections/HeroSection.tsx:6:5",
 		"data-prohibitions": "[]",
-		className: "relative min-h-screen flex items-center justify-center pt-20 overflow-hidden",
+		className: "relative min-h-screen flex items-center pt-20 overflow-hidden bg-background",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			"data-uid": "src/components/sections/HeroSection.tsx:7:7",
 			"data-prohibitions": "[]",
-			className: "absolute inset-0 z-0 flex items-center justify-center opacity-20 pointer-events-none",
+			className: "absolute inset-0 z-0",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					"data-uid": "src/components/sections/HeroSection.tsx:8:9",
 					"data-prohibitions": "[editContent]",
-					className: "w-[800px] h-[800px] bg-primary/30 rounded-full blur-[120px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+					className: "absolute inset-0 bg-[url('https://img.usecurling.com/p/1920/1080?q=robot%20artificial%20intelligence&color=green')] bg-cover bg-center opacity-10 mix-blend-luminosity"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					"data-uid": "src/components/sections/HeroSection.tsx:9:9",
-					"data-prohibitions": "[]",
-					className: "absolute top-1/4 left-1/4 border border-primary/50 p-4 rounded-xl rotate-12 animate-float",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Workflow, {
-						"data-uid": "src/components/sections/HeroSection.tsx:10:11",
-						"data-prohibitions": "[editContent]",
-						className: "w-12 h-12 text-primary"
-					})
+					"data-prohibitions": "[editContent]",
+					className: "absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/HeroSection.tsx:10:9",
+					"data-prohibitions": "[editContent]",
+					className: "w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					"data-uid": "src/components/sections/HeroSection.tsx:12:9",
 					"data-prohibitions": "[]",
-					className: "absolute bottom-1/4 right-1/4 border border-primary/50 p-4 rounded-xl -rotate-12 animate-float",
+					className: "absolute top-1/4 left-[10%] border border-primary/50 p-4 rounded-xl rotate-12 animate-float bg-background/50 backdrop-blur-sm hidden lg:block",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Workflow, {
+						"data-uid": "src/components/sections/HeroSection.tsx:13:11",
+						"data-prohibitions": "[editContent]",
+						className: "w-12 h-12 text-primary"
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/HeroSection.tsx:15:9",
+					"data-prohibitions": "[]",
+					className: "absolute bottom-1/4 right-[10%] border border-primary/50 p-4 rounded-xl -rotate-12 animate-float bg-background/50 backdrop-blur-sm hidden lg:block",
 					style: { animationDelay: "1s" },
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bot, {
-						"data-uid": "src/components/sections/HeroSection.tsx:16:11",
+						"data-uid": "src/components/sections/HeroSection.tsx:19:11",
 						"data-prohibitions": "[editContent]",
 						className: "w-12 h-12 text-primary"
 					})
 				})
 			]
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/sections/HeroSection.tsx:20:7",
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/HeroSection.tsx:23:7",
 			"data-prohibitions": "[]",
-			className: "container relative z-10 px-4 mx-auto text-center animate-fade-in-up",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/HeroSection.tsx:21:9",
+			className: "container relative z-10 px-4 mx-auto",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/HeroSection.tsx:24:9",
+				"data-prohibitions": "[]",
+				className: "grid lg:grid-cols-2 gap-12 items-center",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/HeroSection.tsx:25:11",
 					"data-prohibitions": "[]",
-					className: "inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full bg-primary/10 text-primary mb-8 border border-primary/20",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-						"data-uid": "src/components/sections/HeroSection.tsx:22:11",
-						"data-prohibitions": "[]",
-						className: "relative flex h-2 w-2",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/HeroSection.tsx:23:13",
-							"data-prohibitions": "[]",
-							className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/HeroSection.tsx:24:13",
-							"data-prohibitions": "[]",
-							className: "relative inline-flex rounded-full h-2 w-2 bg-primary"
-						})]
-					}), "Operação Inteligente & Automatizada"]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					"data-uid": "src/components/sections/HeroSection.tsx:29:9",
-					"data-prohibitions": "[]",
-					className: "text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto mb-6 leading-tight",
+					className: "text-left animate-fade-in-up",
 					children: [
-						"Sua Empresa Transformada em uma",
-						" ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/HeroSection.tsx:31:11",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/HeroSection.tsx:26:13",
 							"data-prohibitions": "[]",
-							className: "text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-300",
-							children: "Máquina de Vendas 24/7"
+							className: "inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full bg-primary/10 text-primary mb-8 border border-primary/20",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								"data-uid": "src/components/sections/HeroSection.tsx:27:15",
+								"data-prohibitions": "[]",
+								className: "relative flex h-2 w-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/HeroSection.tsx:28:17",
+									"data-prohibitions": "[]",
+									className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/HeroSection.tsx:29:17",
+									"data-prohibitions": "[]",
+									className: "relative inline-flex rounded-full h-2 w-2 bg-primary"
+								})]
+							}), "Operação Inteligente & Automatizada"]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+							"data-uid": "src/components/sections/HeroSection.tsx:34:13",
+							"data-prohibitions": "[]",
+							className: "text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-6 leading-tight",
+							children: [
+								"Sua Empresa Transformada em uma",
+								" ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/HeroSection.tsx:36:15",
+									"data-prohibitions": "[]",
+									className: "text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-300",
+									children: "Máquina de Vendas 24/7"
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/components/sections/HeroSection.tsx:41:13",
+							"data-prohibitions": "[]",
+							className: "text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl",
+							children: "Pare de perder leads e dinheiro com processos manuais. Eleve sua maturidade operacional com automações inteligentes e IA que trabalham enquanto você escala seu lucro."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/HeroSection.tsx:47:13",
+							"data-prohibitions": "[]",
+							className: "flex flex-col sm:flex-row gap-4 items-start",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+								"data-uid": "src/components/sections/HeroSection.tsx:48:15",
+								"data-prohibitions": "[]",
+								size: "lg",
+								className: "h-14 px-8 text-lg glow-hover w-full sm:w-auto",
+								onClick: () => window.open("https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o", "_blank"),
+								children: ["Diagnóstico Gratuito de Automação", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+									"data-uid": "src/components/sections/HeroSection.tsx:59:17",
+									"data-prohibitions": "[editContent]",
+									className: "ml-2 h-5 w-5"
+								})]
+							})
 						})
 					]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					"data-uid": "src/components/sections/HeroSection.tsx:36:9",
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					"data-uid": "src/components/sections/HeroSection.tsx:64:11",
 					"data-prohibitions": "[]",
-					className: "text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed",
-					children: "Pare de perder leads e dinheiro com processos manuais. Eleve sua maturidade operacional com automações inteligentes e IA que trabalham enquanto você escala seu lucro."
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/sections/HeroSection.tsx:41:9",
-					"data-prohibitions": "[]",
-					className: "flex flex-col sm:flex-row gap-4 justify-center items-center",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-						"data-uid": "src/components/sections/HeroSection.tsx:42:11",
+					className: "relative hidden lg:block animate-fade-in-up",
+					style: { animationDelay: "0.2s" },
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/HeroSection.tsx:68:13",
 						"data-prohibitions": "[]",
-						size: "lg",
-						className: "h-14 px-8 text-lg glow-hover w-full sm:w-auto",
-						onClick: () => window.open("https://wa.me/5521967578095", "_blank"),
-						children: ["Diagnóstico Gratuito de Automação", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-							"data-uid": "src/components/sections/HeroSection.tsx:48:13",
+						className: "relative rounded-2xl overflow-hidden border border-border/50 glow-hover group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							"data-uid": "src/components/sections/HeroSection.tsx:69:15",
 							"data-prohibitions": "[editContent]",
-							className: "ml-2 h-5 w-5"
+							src: "https://img.usecurling.com/p/800/800?q=cyborg%20ai&color=green&dpr=2",
+							alt: "Inteligência Artificial L34f4r",
+							className: "w-full h-auto object-cover opacity-90 mix-blend-lighten transition-transform duration-1000 group-hover:scale-105"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/HeroSection.tsx:74:15",
+							"data-prohibitions": "[editContent]",
+							className: "absolute inset-0 bg-gradient-to-tr from-background via-background/20 to-transparent"
 						})]
 					})
-				})
-			]
+				})]
+			})
 		})]
 	});
 }
@@ -24666,245 +24757,261 @@ function SolutionSection() {
 		"data-prohibitions": "[editContent]",
 		id: "solucao",
 		className: "py-24 bg-background relative overflow-hidden",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/SolutionSection.tsx:9:7",
-			"data-prohibitions": "[editContent]",
-			className: "absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/SolutionSection.tsx:11:7",
-			"data-prohibitions": "[editContent]",
-			ref,
-			className: `container px-4 mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`,
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/SolutionSection.tsx:17:9",
-				"data-prohibitions": "[]",
-				className: "grid lg:grid-cols-2 gap-16 items-center",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/SolutionSection.tsx:18:11",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/SolutionSection.tsx:9:7",
+				"data-prohibitions": "[editContent]",
+				className: "absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/SolutionSection.tsx:10:7",
+				"data-prohibitions": "[editContent]",
+				className: "absolute -left-40 bottom-0 w-96 h-96 bg-[url('https://img.usecurling.com/p/400/400?q=robot%20arm&color=green')] opacity-10 bg-contain bg-no-repeat mix-blend-screen pointer-events-none"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"data-uid": "src/components/sections/SolutionSection.tsx:12:7",
+				"data-prohibitions": "[editContent]",
+				ref,
+				className: `container px-4 mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`,
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/SolutionSection.tsx:18:9",
 					"data-prohibitions": "[]",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-							"data-uid": "src/components/sections/SolutionSection.tsx:19:13",
-							"data-prohibitions": "[]",
-							className: "text-3xl md:text-5xl font-extrabold tracking-tight mb-6",
-							children: ["A Orquestração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"data-uid": "src/components/sections/SolutionSection.tsx:20:30",
-								"data-prohibitions": "[]",
-								className: "text-primary",
-								children: "Perfeita"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							"data-uid": "src/components/sections/SolutionSection.tsx:22:13",
-							"data-prohibitions": "[]",
-							className: "text-muted-foreground text-lg mb-10",
-							children: "Unimos o poder de automação do n8n com a inteligência artificial para criar fluxos que atendem, qualificam e gerenciam seus clientes em tempo real."
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/SolutionSection.tsx:27:13",
-							"data-prohibitions": "[]",
-							className: "space-y-8",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:28:15",
-									"data-prohibitions": "[]",
-									className: "flex gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:29:17",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageSquare, {
-											"data-uid": "src/components/sections/SolutionSection.tsx:30:19",
-											"data-prohibitions": "[editContent]",
-											className: "w-6 h-6"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:32:17",
-										"data-prohibitions": "[]",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											"data-uid": "src/components/sections/SolutionSection.tsx:33:19",
-											"data-prohibitions": "[]",
-											className: "text-xl font-semibold mb-2",
-											children: "Atendimento Instantâneo"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/SolutionSection.tsx:34:19",
-											"data-prohibitions": "[]",
-											className: "text-muted-foreground",
-											children: "Respostas imediatas no WhatsApp e Instagram 24 horas por dia, 7 dias por semana."
-										})]
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:40:15",
-									"data-prohibitions": "[]",
-									className: "flex gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:41:17",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, {
-											"data-uid": "src/components/sections/SolutionSection.tsx:42:19",
-											"data-prohibitions": "[editContent]",
-											className: "w-6 h-6"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:44:17",
-										"data-prohibitions": "[]",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											"data-uid": "src/components/sections/SolutionSection.tsx:45:19",
-											"data-prohibitions": "[]",
-											className: "text-xl font-semibold mb-2",
-											children: "Qualificação Automática"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/SolutionSection.tsx:46:19",
-											"data-prohibitions": "[]",
-											className: "text-muted-foreground",
-											children: "Agentes de IA conversam, entendem a necessidade e classificam a temperatura do lead de forma padronizada."
-										})]
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:53:15",
-									"data-prohibitions": "[]",
-									className: "flex gap-4",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:54:17",
-										"data-prohibitions": "[]",
-										className: "w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Blocks, {
-											"data-uid": "src/components/sections/SolutionSection.tsx:55:19",
-											"data-prohibitions": "[editContent]",
-											className: "w-6 h-6"
-										})
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:57:17",
-										"data-prohibitions": "[]",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											"data-uid": "src/components/sections/SolutionSection.tsx:58:19",
-											"data-prohibitions": "[]",
-											className: "text-xl font-semibold mb-2",
-											children: "CRM Atualizado"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											"data-uid": "src/components/sections/SolutionSection.tsx:59:19",
-											"data-prohibitions": "[]",
-											className: "text-muted-foreground",
-											children: "Dados sincronizados automaticamente com seu CRM, planilhas e sistemas internos sem intervenção humana."
-										})]
-									})]
-								})
-							]
-						})
-					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					"data-uid": "src/components/sections/SolutionSection.tsx:68:11",
-					"data-prohibitions": "[]",
-					className: "relative",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/SolutionSection.tsx:69:13",
-						"data-prohibitions": "[editContent]",
-						className: "absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl -z-10 rounded-full"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						"data-uid": "src/components/sections/SolutionSection.tsx:70:13",
+					className: "grid lg:grid-cols-2 gap-16 items-center",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/SolutionSection.tsx:19:11",
 						"data-prohibitions": "[]",
-						className: "border border-border/50 rounded-2xl bg-zinc-900/80 backdrop-blur-sm shadow-2xl overflow-hidden glow-hover",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/SolutionSection.tsx:71:15",
-							"data-prohibitions": "[]",
-							className: "bg-zinc-800/80 px-4 py-3 border-b border-border/50 flex items-center gap-3",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								"data-uid": "src/components/sections/SolutionSection.tsx:72:17",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+								"data-uid": "src/components/sections/SolutionSection.tsx:20:13",
 								"data-prohibitions": "[]",
-								className: "w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, {
-									"data-uid": "src/components/sections/SolutionSection.tsx:73:19",
-									"data-prohibitions": "[editContent]",
-									className: "w-5 h-5"
-								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								"data-uid": "src/components/sections/SolutionSection.tsx:75:17",
-								"data-prohibitions": "[]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:76:19",
+								className: "text-3xl md:text-5xl font-extrabold tracking-tight mb-6",
+								children: ["A Orquestração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"data-uid": "src/components/sections/SolutionSection.tsx:21:30",
 									"data-prohibitions": "[]",
-									className: "font-semibold text-sm",
-									children: "IA de Vendas"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:77:19",
-									"data-prohibitions": "[]",
-									className: "text-xs text-emerald-400",
-									children: "Online"
+									className: "text-primary",
+									children: "Perfeita"
 								})]
-							})]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							"data-uid": "src/components/sections/SolutionSection.tsx:81:15",
-							"data-prohibitions": "[]",
-							className: "p-4 space-y-4 h-[400px] overflow-y-auto bg-[url('https://img.usecurling.com/p/800/600?q=pattern&color=black&dpr=1')] bg-cover bg-center bg-blend-overlay bg-black/40",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:82:17",
-									"data-prohibitions": "[]",
-									className: "bg-zinc-800 rounded-lg rounded-tl-none p-3 max-w-[80%] border border-border/30",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:83:19",
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								"data-uid": "src/components/sections/SolutionSection.tsx:23:13",
+								"data-prohibitions": "[]",
+								className: "text-muted-foreground text-lg mb-10",
+								children: "Unimos o poder de automação do n8n com a inteligência artificial para criar fluxos que atendem, qualificam e gerenciam seus clientes em tempo real."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/SolutionSection.tsx:28:13",
+								"data-prohibitions": "[]",
+								className: "space-y-8",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/SolutionSection.tsx:29:15",
 										"data-prohibitions": "[]",
-										className: "text-sm",
-										children: "Olá! Vi que você tem interesse em automatizar seus processos. Como posso te ajudar hoje?"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:87:19",
+										className: "flex gap-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:30:17",
+											"data-prohibitions": "[]",
+											className: "w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary border border-primary/20",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageSquare, {
+												"data-uid": "src/components/sections/SolutionSection.tsx:31:19",
+												"data-prohibitions": "[editContent]",
+												className: "w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:33:17",
+											"data-prohibitions": "[]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:34:19",
+												"data-prohibitions": "[]",
+												className: "text-xl font-semibold mb-2",
+												children: "Atendimento Instantâneo"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:35:19",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: "Respostas imediatas no WhatsApp e Instagram 24 horas por dia, 7 dias por semana."
+											})]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/SolutionSection.tsx:41:15",
 										"data-prohibitions": "[]",
-										className: "text-[10px] text-muted-foreground block mt-1 text-right",
-										children: "09:41"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:92:17",
-									"data-prohibitions": "[]",
-									className: "bg-primary/20 text-primary-foreground rounded-lg rounded-tr-none p-3 max-w-[80%] ml-auto border border-primary/30",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:93:19",
+										className: "flex gap-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:42:17",
+											"data-prohibitions": "[]",
+											className: "w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary border border-primary/20",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, {
+												"data-uid": "src/components/sections/SolutionSection.tsx:43:19",
+												"data-prohibitions": "[editContent]",
+												className: "w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:45:17",
+											"data-prohibitions": "[]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:46:19",
+												"data-prohibitions": "[]",
+												className: "text-xl font-semibold mb-2",
+												children: "Qualificação Automática"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:47:19",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: "Agentes de IA conversam, entendem a necessidade e classificam a temperatura do lead de forma padronizada."
+											})]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/SolutionSection.tsx:54:15",
 										"data-prohibitions": "[]",
-										className: "text-sm text-foreground",
-										children: "Minha equipe de vendas demora muito para responder no WhatsApp. Perdemos vendas."
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:96:19",
-										"data-prohibitions": "[]",
-										className: "text-[10px] text-primary/70 block mt-1 text-right",
-										children: "09:42"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:99:17",
-									"data-prohibitions": "[]",
-									className: "bg-zinc-800 rounded-lg rounded-tl-none p-3 max-w-[80%] border border-border/30 animate-fade-in-up",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:100:19",
-										"data-prohibitions": "[]",
-										className: "text-sm",
-										children: "Entendo perfeitamente. Com nossas soluções, o tempo de resposta cai para zero e a IA qualifica o lead antes de passar para um humano. Qual o seu volume atual de atendimentos por dia?"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:105:19",
-										"data-prohibitions": "[]",
-										className: "text-[10px] text-muted-foreground block mt-1 text-right",
-										children: "09:42"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									"data-uid": "src/components/sections/SolutionSection.tsx:110:17",
-									"data-prohibitions": "[]",
-									className: "flex items-center justify-center my-4",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										"data-uid": "src/components/sections/SolutionSection.tsx:111:19",
-										"data-prohibitions": "[]",
-										className: "text-[10px] bg-zinc-950/80 px-2 py-1 rounded-full text-muted-foreground border border-border/50",
-										children: "Lead Qualificado - CRM Atualizado"
+										className: "flex gap-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:55:17",
+											"data-prohibitions": "[]",
+											className: "w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary border border-primary/20",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Blocks, {
+												"data-uid": "src/components/sections/SolutionSection.tsx:56:19",
+												"data-prohibitions": "[editContent]",
+												className: "w-6 h-6"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:58:17",
+											"data-prohibitions": "[]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:59:19",
+												"data-prohibitions": "[]",
+												className: "text-xl font-semibold mb-2",
+												children: "CRM Atualizado"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:60:19",
+												"data-prohibitions": "[]",
+												className: "text-muted-foreground",
+												children: "Dados sincronizados automaticamente com seu CRM, planilhas e sistemas internos sem intervenção humana."
+											})]
+										})]
 									})
+								]
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						"data-uid": "src/components/sections/SolutionSection.tsx:69:11",
+						"data-prohibitions": "[]",
+						className: "relative",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/SolutionSection.tsx:70:13",
+							"data-prohibitions": "[editContent]",
+							className: "absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl -z-10 rounded-full"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/SolutionSection.tsx:71:13",
+							"data-prohibitions": "[]",
+							className: "relative border border-border/50 rounded-2xl bg-zinc-900/80 backdrop-blur-sm shadow-2xl overflow-hidden glow-hover",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/SolutionSection.tsx:72:15",
+									"data-prohibitions": "[editContent]",
+									className: "absolute right-0 bottom-0 w-64 h-64 bg-[url('https://img.usecurling.com/p/300/300?q=cyborg%20eye&color=green')] opacity-5 bg-contain bg-no-repeat bg-right-bottom mix-blend-screen pointer-events-none z-0"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/SolutionSection.tsx:74:15",
+									"data-prohibitions": "[]",
+									className: "bg-zinc-800/80 px-4 py-3 border-b border-border/50 flex items-center gap-3 relative z-10",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										"data-uid": "src/components/sections/SolutionSection.tsx:75:17",
+										"data-prohibitions": "[]",
+										className: "w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, {
+											"data-uid": "src/components/sections/SolutionSection.tsx:76:19",
+											"data-prohibitions": "[editContent]",
+											className: "w-5 h-5"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										"data-uid": "src/components/sections/SolutionSection.tsx:78:17",
+										"data-prohibitions": "[]",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:79:19",
+											"data-prohibitions": "[]",
+											className: "font-semibold text-sm",
+											children: "IA de Vendas"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:80:19",
+											"data-prohibitions": "[]",
+											className: "text-xs text-emerald-400",
+											children: "Online"
+										})]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/SolutionSection.tsx:84:15",
+									"data-prohibitions": "[]",
+									className: "p-4 space-y-4 h-[400px] overflow-y-auto bg-[url('https://img.usecurling.com/p/800/600?q=pattern&color=black&dpr=1')] bg-cover bg-center bg-blend-overlay bg-black/60 relative z-10",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:85:17",
+											"data-prohibitions": "[]",
+											className: "bg-zinc-800 rounded-lg rounded-tl-none p-3 max-w-[80%] border border-border/30",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:86:19",
+												"data-prohibitions": "[]",
+												className: "text-sm",
+												children: "Olá! Vi que você tem interesse em automatizar seus processos. Como posso te ajudar hoje?"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:90:19",
+												"data-prohibitions": "[]",
+												className: "text-[10px] text-muted-foreground block mt-1 text-right",
+												children: "09:41"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:95:17",
+											"data-prohibitions": "[]",
+											className: "bg-primary/20 text-primary-foreground rounded-lg rounded-tr-none p-3 max-w-[80%] ml-auto border border-primary/30",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:96:19",
+												"data-prohibitions": "[]",
+												className: "text-sm text-foreground",
+												children: "Minha equipe de vendas demora muito para responder no WhatsApp. Perdemos vendas."
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:99:19",
+												"data-prohibitions": "[]",
+												className: "text-[10px] text-primary/70 block mt-1 text-right",
+												children: "09:42"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:102:17",
+											"data-prohibitions": "[]",
+											className: "bg-zinc-800 rounded-lg rounded-tl-none p-3 max-w-[80%] border border-border/30 animate-fade-in-up",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:103:19",
+												"data-prohibitions": "[]",
+												className: "text-sm",
+												children: "Entendo perfeitamente. Com nossas soluções, o tempo de resposta cai para zero e a IA qualifica o lead antes de passar para um humano. Qual o seu volume atual de atendimentos por dia?"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:108:19",
+												"data-prohibitions": "[]",
+												className: "text-[10px] text-muted-foreground block mt-1 text-right",
+												children: "09:42"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											"data-uid": "src/components/sections/SolutionSection.tsx:113:17",
+											"data-prohibitions": "[]",
+											className: "flex items-center justify-center my-4",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												"data-uid": "src/components/sections/SolutionSection.tsx:114:19",
+												"data-prohibitions": "[]",
+												className: "text-[10px] bg-zinc-950/80 px-2 py-1 rounded-full text-muted-foreground border border-border/50",
+												children: "Lead Qualificado - CRM Atualizado"
+											})
+										})
+									]
 								})
 							]
 						})]
 					})]
-				})]
+				})
 			})
-		})]
+		]
 	});
 }
 //#endregion
@@ -25120,6 +25227,143 @@ function ComparisonSection() {
 				})
 			})]
 		})
+	});
+}
+//#endregion
+//#region src/components/sections/ApiOficialSection.tsx
+function ApiOficialSection() {
+	const { ref, isVisible } = useScrollAnimation();
+	const features = [
+		{
+			icon: ShieldCheck,
+			title: "Segurança Total",
+			description: "Proteja os dados dos seus clientes com criptografia de ponta a ponta e conformidade com as diretrizes do WhatsApp."
+		},
+		{
+			icon: Server,
+			title: "Estabilidade Máxima",
+			description: "Sem quedas, sem desconexões de QR Code. Sua operação roda de forma fluida em servidores robustos."
+		},
+		{
+			icon: Ban,
+			title: "Fim dos Bloqueios",
+			description: "Opere dentro das regras. Com a API Oficial, o risco de ter seu número banido por spam cai drasticamente."
+		}
+	];
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		"data-uid": "src/components/sections/ApiOficialSection.tsx:30:5",
+		"data-prohibitions": "[editContent]",
+		id: "api-oficial",
+		className: "py-24 bg-zinc-950 border-t border-border/20 relative overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/ApiOficialSection.tsx:34:7",
+			"data-prohibitions": "[editContent]",
+			className: "absolute top-1/2 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px] -translate-y-1/2 -z-10"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			"data-uid": "src/components/sections/ApiOficialSection.tsx:36:7",
+			"data-prohibitions": "[editContent]",
+			ref,
+			className: `container px-4 mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`,
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				"data-uid": "src/components/sections/ApiOficialSection.tsx:42:9",
+				"data-prohibitions": "[editContent]",
+				className: "grid lg:grid-cols-2 gap-16 items-center",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/ApiOficialSection.tsx:43:11",
+					"data-prohibitions": "[editContent]",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							"data-uid": "src/components/sections/ApiOficialSection.tsx:44:13",
+							"data-prohibitions": "[]",
+							className: "inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full bg-emerald-500/10 text-emerald-400 mb-6 border border-emerald-500/20",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+								"data-uid": "src/components/sections/ApiOficialSection.tsx:45:15",
+								"data-prohibitions": "[editContent]",
+								className: "w-4 h-4"
+							}), "WhatsApp Business API"]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+							"data-uid": "src/components/sections/ApiOficialSection.tsx:49:13",
+							"data-prohibitions": "[]",
+							className: "text-3xl md:text-5xl font-extrabold tracking-tight mb-6",
+							children: ["Escalabilidade com a ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"data-uid": "src/components/sections/ApiOficialSection.tsx:50:36",
+								"data-prohibitions": "[]",
+								className: "text-emerald-400",
+								children: "API Oficial"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"data-uid": "src/components/sections/ApiOficialSection.tsx:52:13",
+							"data-prohibitions": "[]",
+							className: "text-muted-foreground text-lg mb-10",
+							children: "Chega de improvisos. Profissionalize seu atendimento com a infraestrutura oficial da Meta, garantindo segurança e escalabilidade para sua máquina de vendas."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"data-uid": "src/components/sections/ApiOficialSection.tsx:57:13",
+							"data-prohibitions": "[editContent]",
+							className: "space-y-6 mb-10",
+							children: features.map((feature, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								"data-uid": "src/components/sections/ApiOficialSection.tsx:59:17",
+								"data-prohibitions": "[editContent]",
+								className: "flex gap-4 items-start",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									"data-uid": "src/components/sections/ApiOficialSection.tsx:60:19",
+									"data-prohibitions": "[]",
+									className: "w-12 h-12 rounded-lg bg-emerald-500/10 flex-shrink-0 flex items-center justify-center text-emerald-400 border border-emerald-500/20",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(feature.icon, {
+										"data-uid": "src/components/sections/ApiOficialSection.tsx:61:21",
+										"data-prohibitions": "[editContent]",
+										className: "w-6 h-6"
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									"data-uid": "src/components/sections/ApiOficialSection.tsx:63:19",
+									"data-prohibitions": "[editContent]",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										"data-uid": "src/components/sections/ApiOficialSection.tsx:64:21",
+										"data-prohibitions": "[editContent]",
+										className: "text-xl font-semibold mb-2",
+										children: feature.title
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										"data-uid": "src/components/sections/ApiOficialSection.tsx:65:21",
+										"data-prohibitions": "[editContent]",
+										className: "text-muted-foreground",
+										children: feature.description
+									})]
+								})]
+							}, index))
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							"data-uid": "src/components/sections/ApiOficialSection.tsx:71:13",
+							"data-prohibitions": "[]",
+							size: "lg",
+							className: "h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-[0_0_20px_rgba(5,150,105,0.3)] hover:shadow-[0_0_30px_rgba(5,150,105,0.5)] transition-all",
+							onClick: () => window.open("https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20de%20API%20oficial", "_blank"),
+							children: ["Quero saber mais sobre a API Oficial", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
+								"data-uid": "src/components/sections/ApiOficialSection.tsx:82:15",
+								"data-prohibitions": "[editContent]",
+								className: "ml-2 h-5 w-5"
+							})]
+						})
+					]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					"data-uid": "src/components/sections/ApiOficialSection.tsx:86:11",
+					"data-prohibitions": "[]",
+					className: "relative rounded-2xl overflow-hidden border border-border/50 glow-hover aspect-square max-w-md mx-auto w-full group",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						"data-uid": "src/components/sections/ApiOficialSection.tsx:87:13",
+						"data-prohibitions": "[editContent]",
+						src: "https://img.usecurling.com/p/600/600?q=robot%20server&color=green&dpr=2",
+						alt: "Servidor e Robô da API Oficial",
+						className: "w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						"data-uid": "src/components/sections/ApiOficialSection.tsx:92:13",
+						"data-prohibitions": "[editContent]",
+						className: "absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"
+					})]
+				})]
+			})
+		})]
 	});
 }
 //#endregion
@@ -25728,52 +25972,52 @@ function CtaSection() {
 	const handleCtaClick = () => {
 		setIsLoading(true);
 		setTimeout(() => {
-			window.open("https://wa.me/5521967578095", "_blank");
+			window.open("https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o", "_blank");
 			setIsLoading(false);
 		}, 800);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		"data-uid": "src/components/sections/CtaSection.tsx:19:5",
+		"data-uid": "src/components/sections/CtaSection.tsx:22:5",
 		"data-prohibitions": "[editContent]",
 		className: "py-24 relative overflow-hidden border-t border-border/20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/CtaSection.tsx:20:7",
+			"data-uid": "src/components/sections/CtaSection.tsx:23:7",
 			"data-prohibitions": "[editContent]",
 			className: "absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background z-0"
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			"data-uid": "src/components/sections/CtaSection.tsx:22:7",
+			"data-uid": "src/components/sections/CtaSection.tsx:25:7",
 			"data-prohibitions": "[editContent]",
 			ref,
 			className: `container relative z-10 px-4 mx-auto max-w-4xl text-center transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`,
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				"data-uid": "src/components/sections/CtaSection.tsx:28:9",
+				"data-uid": "src/components/sections/CtaSection.tsx:31:9",
 				"data-prohibitions": "[editContent]",
 				className: "p-10 md:p-16 rounded-3xl border border-primary/20 bg-zinc-900/60 backdrop-blur-xl shadow-2xl relative overflow-hidden glow-hover",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						"data-uid": "src/components/sections/CtaSection.tsx:29:11",
+						"data-uid": "src/components/sections/CtaSection.tsx:32:11",
 						"data-prohibitions": "[editContent]",
 						className: "absolute inset-0 bg-[url('https://img.usecurling.com/p/800/400?q=noise&color=black')] opacity-20 mix-blend-overlay pointer-events-none"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						"data-uid": "src/components/sections/CtaSection.tsx:31:11",
+						"data-uid": "src/components/sections/CtaSection.tsx:34:11",
 						"data-prohibitions": "[]",
 						className: "text-4xl md:text-5xl font-extrabold tracking-tight mb-6",
 						children: ["Pronto para ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							"data-uid": "src/components/sections/CtaSection.tsx:32:25",
+							"data-uid": "src/components/sections/CtaSection.tsx:35:25",
 							"data-prohibitions": "[]",
 							className: "text-primary",
 							children: "automatizar seu lucro?"
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						"data-uid": "src/components/sections/CtaSection.tsx:35:11",
+						"data-uid": "src/components/sections/CtaSection.tsx:38:11",
 						"data-prohibitions": "[]",
 						className: "text-xl text-muted-foreground mb-10 max-w-2xl mx-auto",
 						children: "Dê o primeiro passo para elevar a maturidade operacional da sua empresa. Faça um diagnóstico sem compromisso com nossos especialistas."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-						"data-uid": "src/components/sections/CtaSection.tsx:40:11",
+						"data-uid": "src/components/sections/CtaSection.tsx:43:11",
 						"data-prohibitions": "[editContent]",
 						size: "lg",
 						className: "h-14 px-8 text-lg w-full sm:w-auto glow-hover group",
@@ -25781,13 +26025,13 @@ function CtaSection() {
 						disabled: isLoading,
 						children: [
 							isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, {
-								"data-uid": "src/components/sections/CtaSection.tsx:46:26",
+								"data-uid": "src/components/sections/CtaSection.tsx:49:26",
 								"data-prohibitions": "[editContent]",
 								className: "mr-2 h-5 w-5 animate-spin"
 							}) : null,
 							"Diagnóstico Gratuito de Automação",
 							!isLoading && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
-								"data-uid": "src/components/sections/CtaSection.tsx:49:15",
+								"data-uid": "src/components/sections/CtaSection.tsx:52:15",
 								"data-prohibitions": "[editContent]",
 								className: "ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
 							})
@@ -25802,36 +26046,40 @@ function CtaSection() {
 //#region src/pages/Index.tsx
 var Index = () => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		"data-uid": "src/pages/Index.tsx:11:5",
+		"data-uid": "src/pages/Index.tsx:12:5",
 		"data-prohibitions": "[]",
 		className: "flex flex-col w-full",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, {
-				"data-uid": "src/pages/Index.tsx:12:7",
-				"data-prohibitions": "[editContent]"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProblemSection, {
 				"data-uid": "src/pages/Index.tsx:13:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SolutionSection, {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProblemSection, {
 				"data-uid": "src/pages/Index.tsx:14:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ComparisonSection, {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SolutionSection, {
 				"data-uid": "src/pages/Index.tsx:15:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthoritySection, {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ComparisonSection, {
 				"data-uid": "src/pages/Index.tsx:16:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaqSection, {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ApiOficialSection, {
 				"data-uid": "src/pages/Index.tsx:17:7",
 				"data-prohibitions": "[editContent]"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CtaSection, {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthoritySection, {
 				"data-uid": "src/pages/Index.tsx:18:7",
+				"data-prohibitions": "[editContent]"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaqSection, {
+				"data-uid": "src/pages/Index.tsx:19:7",
+				"data-prohibitions": "[editContent]"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CtaSection, {
+				"data-uid": "src/pages/Index.tsx:20:7",
 				"data-prohibitions": "[editContent]"
 			})
 		]
@@ -27287,6 +27535,10 @@ function Header() {
 			label: "Comparativo"
 		},
 		{
+			href: "#api-oficial",
+			label: "API Oficial"
+		},
+		{
 			href: "#faq",
 			label: "FAQ"
 		}
@@ -27299,101 +27551,102 @@ function Header() {
 			setIsOpen(false);
 		}
 	};
+	const whatsappLink = "https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o";
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-		"data-uid": "src/components/Header.tsx:26:5",
+		"data-uid": "src/components/Header.tsx:30:5",
 		"data-prohibitions": "[editContent]",
 		className: "fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			"data-uid": "src/components/Header.tsx:27:7",
+			"data-uid": "src/components/Header.tsx:31:7",
 			"data-prohibitions": "[editContent]",
 			className: "container mx-auto flex h-16 items-center justify-between px-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-					"data-uid": "src/components/Header.tsx:28:9",
+					"data-uid": "src/components/Header.tsx:32:9",
 					"data-prohibitions": "[]",
 					href: "#",
 					className: "text-xl font-extrabold tracking-tight glow-text text-primary",
 					children: ["L34f4r ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						"data-uid": "src/components/Header.tsx:29:18",
+						"data-uid": "src/components/Header.tsx:33:18",
 						"data-prohibitions": "[]",
 						className: "text-foreground font-medium",
 						children: "Integrações"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-					"data-uid": "src/components/Header.tsx:32:9",
+					"data-uid": "src/components/Header.tsx:36:9",
 					"data-prohibitions": "[editContent]",
 					className: "hidden md:flex items-center gap-6",
 					children: [links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						"data-uid": "src/components/Header.tsx:34:13",
+						"data-uid": "src/components/Header.tsx:38:13",
 						"data-prohibitions": "[editContent]",
 						href: link.href,
 						onClick: handleScroll,
 						className: "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors",
 						children: link.label
 					}, link.href)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-						"data-uid": "src/components/Header.tsx:43:11",
+						"data-uid": "src/components/Header.tsx:47:11",
 						"data-prohibitions": "[]",
 						className: "glow-hover",
-						onClick: () => window.open("https://wa.me/5521967578095", "_blank"),
+						onClick: () => window.open(whatsappLink, "_blank"),
 						children: "Diagnóstico Gratuito de Automação"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					"data-uid": "src/components/Header.tsx:51:9",
+					"data-uid": "src/components/Header.tsx:52:9",
 					"data-prohibitions": "[editContent]",
 					className: "md:hidden",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Sheet, {
-						"data-uid": "src/components/Header.tsx:52:11",
+						"data-uid": "src/components/Header.tsx:53:11",
 						"data-prohibitions": "[editContent]",
 						open: isOpen,
 						onOpenChange: setIsOpen,
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetTrigger, {
-							"data-uid": "src/components/Header.tsx:53:13",
+							"data-uid": "src/components/Header.tsx:54:13",
 							"data-prohibitions": "[]",
 							asChild: true,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-								"data-uid": "src/components/Header.tsx:54:15",
+								"data-uid": "src/components/Header.tsx:55:15",
 								"data-prohibitions": "[]",
 								variant: "ghost",
 								size: "icon",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
-									"data-uid": "src/components/Header.tsx:55:17",
+									"data-uid": "src/components/Header.tsx:56:17",
 									"data-prohibitions": "[editContent]",
 									className: "h-6 w-6"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									"data-uid": "src/components/Header.tsx:56:17",
+									"data-uid": "src/components/Header.tsx:57:17",
 									"data-prohibitions": "[]",
 									className: "sr-only",
 									children: "Abrir menu"
 								})]
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SheetContent, {
-							"data-uid": "src/components/Header.tsx:59:13",
+							"data-uid": "src/components/Header.tsx:60:13",
 							"data-prohibitions": "[editContent]",
 							side: "right",
 							className: "w-[300px] sm:w-[400px]",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SheetTitle, {
-								"data-uid": "src/components/Header.tsx:60:15",
+								"data-uid": "src/components/Header.tsx:61:15",
 								"data-prohibitions": "[]",
 								className: "text-left mb-6",
 								children: "Menu"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-								"data-uid": "src/components/Header.tsx:61:15",
+								"data-uid": "src/components/Header.tsx:62:15",
 								"data-prohibitions": "[editContent]",
 								className: "flex flex-col gap-4",
 								children: [links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									"data-uid": "src/components/Header.tsx:63:19",
+									"data-uid": "src/components/Header.tsx:64:19",
 									"data-prohibitions": "[editContent]",
 									href: link.href,
 									onClick: handleScroll,
 									className: "block text-lg font-medium text-foreground hover:text-primary transition-colors",
 									children: link.label
 								}, link.href)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									"data-uid": "src/components/Header.tsx:72:17",
+									"data-uid": "src/components/Header.tsx:73:17",
 									"data-prohibitions": "[]",
 									className: "w-full mt-4 glow-hover",
-									onClick: () => window.open("https://wa.me/5521967578095", "_blank"),
+									onClick: () => window.open(whatsappLink, "_blank"),
 									children: "Diagnóstico Gratuito de Automação"
 								})]
 							})]
@@ -27466,7 +27719,7 @@ function FloatingWhatsApp() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 		"data-uid": "src/components/FloatingWhatsApp.tsx:5:5",
 		"data-prohibitions": "[]",
-		href: "https://wa.me/5521967578095",
+		href: "https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o",
 		target: "_blank",
 		rel: "noreferrer",
 		className: "fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-110",
@@ -27589,4 +27842,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 }));
 //#endregion
 
-//# sourceMappingURL=index-CoA1LOm4.js.map
+//# sourceMappingURL=index-BuJei-0A.js.map

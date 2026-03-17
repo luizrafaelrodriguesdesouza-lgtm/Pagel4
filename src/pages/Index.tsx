@@ -2,6 +2,7 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { ProblemSection } from '@/components/sections/ProblemSection'
 import { SolutionSection } from '@/components/sections/SolutionSection'
 import { ComparisonSection } from '@/components/sections/ComparisonSection'
+import { ApiOficialSection } from '@/components/sections/ApiOficialSection'
 import { AuthoritySection } from '@/components/sections/AuthoritySection'
 import { FaqSection } from '@/components/sections/FaqSection'
 import { CtaSection } from '@/components/sections/CtaSection'
@@ -13,6 +14,7 @@ const Index = () => {
       <ProblemSection />
       <SolutionSection />
       <ComparisonSection />
+      <ApiOficialSection />
       <AuthoritySection />
       <FaqSection />
       <CtaSection />

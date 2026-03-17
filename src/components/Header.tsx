@@ -10,6 +10,7 @@ export default function Header() {
     { href: '#problemas', label: 'Problemas' },
     { href: '#solucao', label: 'Solução' },
     { href: '#comparativo', label: 'Comparativo' },
+    { href: '#api-oficial', label: 'API Oficial' },
     { href: '#faq', label: 'FAQ' },
   ]
 
@@ -21,6 +22,9 @@ export default function Header() {
       setIsOpen(false)
     }
   }
+
+  const whatsappLink =
+    'https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o'
 
   return (
     <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
@@ -40,10 +44,7 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <Button
-            className="glow-hover"
-            onClick={() => window.open('https://wa.me/5521967578095', '_blank')}
-          >
+          <Button className="glow-hover" onClick={() => window.open(whatsappLink, '_blank')}>
             Diagnóstico Gratuito de Automação
           </Button>
         </nav>
@@ -71,7 +72,7 @@ export default function Header() {
                 ))}
                 <Button
                   className="w-full mt-4 glow-hover"
-                  onClick={() => window.open('https://wa.me/5521967578095', '_blank')}
+                  onClick={() => window.open(whatsappLink, '_blank')}
                 >
                   Diagnóstico Gratuito de Automação
                 </Button>
