@@ -29,7 +29,7 @@ export function ComparisonSection() {
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-            Operação Manual vs. <span className="text-primary">L34f4r</span>
+            Operação Manual vs. <span className="text-primary">Raphael L4</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Veja como a automação transforma cada aspecto do seu processo comercial.
@@ -47,7 +47,7 @@ export function ComparisonSection() {
                   Operação Manual
                 </TableHead>
                 <TableHead className="w-[35%] text-primary font-bold py-4 border-l border-border/50 bg-primary/5">
-                  Operação com L34f4r
+                  Operação com Raphael L4
                 </TableHead>
               </TableRow>
             </TableHeader>

@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Menu } from 'lucide-react'
+import { Menu, Instagram } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
+import logoUrl from '@/assets/editedimage1775550192392-591da.png'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,8 +30,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <a href="#" className="text-xl font-extrabold tracking-tight glow-text text-primary">
-          L34f4r <span className="text-foreground font-medium">Integrações</span>
+        <a href="#" className="flex items-center gap-2">
+          <img src={logoUrl} alt="Raphael L4" className="h-8 w-auto object-contain" />
+          <span className="text-xl font-extrabold tracking-tight glow-text text-primary hidden sm:inline-block">
+            Raphael <span className="text-foreground font-medium">L4</span>
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -44,6 +48,14 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://www.instagram.com/raphael_l4_integracoes/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Instagram className="h-5 w-5" />
+          </a>
           <Button className="glow-hover" onClick={() => window.open(whatsappLink, '_blank')}>
             Diagnóstico Gratuito de Automação
           </Button>
@@ -70,6 +82,15 @@ export default function Header() {
                     {link.label}
                   </a>
                 ))}
+                <a
+                  href="https://www.instagram.com/raphael_l4_integracoes/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 text-lg font-medium text-foreground hover:text-primary transition-colors mt-2"
+                >
+                  <Instagram className="h-5 w-5" />
+                  Instagram
+                </a>
                 <Button
                   className="w-full mt-4 glow-hover"
                   onClick={() => window.open(whatsappLink, '_blank')}

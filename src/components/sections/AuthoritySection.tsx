@@ -38,13 +38,13 @@ export function AuthoritySection() {
             </p>
           </div>
           <a
-            href="https://instagram.com/l34f4rintegracoes"
+            href="https://www.instagram.com/raphael_l4_integracoes/"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors bg-primary/10 px-4 py-2 rounded-lg"
           >
             <Instagram className="w-5 h-5" />
-            @l34f4rintegracoes
+            @raphael_l4_integracoes
           </a>
         </div>
 
@@ -53,7 +53,9 @@ export function AuthoritySection() {
             <div
               key={index}
               className="group relative rounded-2xl overflow-hidden border border-border/50 aspect-[9/16] bg-zinc-900 cursor-pointer glow-hover block"
-              onClick={() => window.open('https://instagram.com/l34f4rintegracoes', '_blank')}
+              onClick={() =>
+                window.open('https://www.instagram.com/raphael_l4_integracoes/', '_blank')
+              }
             >
               <img
                 src={video.image}

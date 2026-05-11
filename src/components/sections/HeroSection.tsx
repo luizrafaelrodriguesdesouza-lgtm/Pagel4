@@ -68,7 +68,7 @@ export function HeroSection() {
             <div className="relative rounded-2xl overflow-hidden border border-border/50 glow-hover group">
               <img
                 src="https://img.usecurling.com/p/800/800?q=cyborg%20ai&color=green&dpr=2"
-                alt="Inteligência Artificial L34f4r"
+                alt="Inteligência Artificial Raphael L4"
                 className="w-full h-auto object-cover opacity-90 mix-blend-lighten transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-background via-background/20 to-transparent" />
