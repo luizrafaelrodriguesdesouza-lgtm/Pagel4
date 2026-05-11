@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/sections/HeroSection'
+import { BenefitsSection } from '@/components/sections/BenefitsSection'
 import { PartnersSection } from '@/components/sections/PartnersSection'
 import { ProblemSection } from '@/components/sections/ProblemSection'
 import { SolutionSection } from '@/components/sections/SolutionSection'
@@ -12,6 +13,7 @@ const Index = () => {
   return (
     <div className="flex flex-col w-full">
       <HeroSection />
+      <BenefitsSection />
       <PartnersSection />
       <ProblemSection />
       <SolutionSection />
