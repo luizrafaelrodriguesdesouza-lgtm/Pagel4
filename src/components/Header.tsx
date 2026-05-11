@@ -28,12 +28,12 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <a href="#" className="flex items-center gap-2">
+      <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-6 md:px-12 lg:px-16">
+        <a href="#" className="flex items-center gap-2 pr-12">
           <span className="text-2xl font-extrabold tracking-tight glow-text text-primary">L4</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex flex-1 items-center justify-end gap-6 lg:gap-8">
           {links.map((link) => (
             <a
               key={link.href}
