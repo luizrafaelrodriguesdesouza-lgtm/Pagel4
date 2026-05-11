@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T13:02:04.067Z",
+  "generatedAt": "2026-05-11T13:14:51.035Z",
   "collections": [
     {
       "name": "users",
@@ -70,13 +70,13 @@
         {
           "name": "company",
           "type": "text",
-          "required": false,
+          "required": true,
           "system": false
         },
         {
           "name": "message",
           "type": "text",
-          "required": true,
+          "required": false,
           "system": false
         },
         {
@@ -92,6 +92,12 @@
           "required": false,
           "system": false,
           "autodateTriggers": ["onCreate", "onUpdate"]
+        },
+        {
+          "name": "phone",
+          "type": "text",
+          "required": true,
+          "system": false
         }
       ],
       "indexes": []

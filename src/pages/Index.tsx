@@ -8,12 +8,14 @@ import { ApiOficialSection } from '@/components/sections/ApiOficialSection'
 import { AuthoritySection } from '@/components/sections/AuthoritySection'
 import { FaqSection } from '@/components/sections/FaqSection'
 import { CtaSection } from '@/components/sections/CtaSection'
+import { FormularioLead } from '@/components/sections/FormularioLead'
 
 const Index = () => {
   return (
     <div className="flex flex-col w-full">
       <HeroSection />
       <BenefitsSection />
+      <FormularioLead />
       <PartnersSection />
       <ProblemSection />
       <SolutionSection />
