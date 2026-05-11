@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
+import { useEffect } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { createLead } from '@/services/leads'
+import { useDebounce } from '@/hooks/use-debounce'
 import { useToast } from '@/hooks/use-toast'
 import {
   Form,
@@ -45,6 +47,8 @@ export function FormularioLead() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: 'onSubmit',
+    reValidateMode: 'onSubmit',
     defaultValues: {
       name: '',
       email: '',
@@ -52,6 +56,15 @@ export function FormularioLead() {
       company: '',
     },
   })
+
+  const watchedValues = form.watch()
+  const debouncedValues = useDebounce(watchedValues, 300)
+
+  useEffect(() => {
+    if (form.formState.isDirty) {
+      form.trigger()
+    }
+  }, [debouncedValues, form])
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {

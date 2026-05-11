@@ -3,6 +3,7 @@ import { ArrowRight, Play, AlertCircle, Bot, Workflow } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import logoUrl from '@/assets/editedimage1775550192392-591da.png'
+import { OptimizedImage } from '@/components/ui/optimized-image'
 
 interface HeroData {
   title: string
@@ -172,11 +173,11 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-200 to-blue-100 rounded-[2rem] transform rotate-3 scale-105 opacity-50 blur-2xl" />
 
             <div className="relative h-full w-full rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white flex items-center justify-center p-2 group">
-              <img
+              <OptimizedImage
                 src="https://img.usecurling.com/p/800/600?q=dashboard%20software%20interface%20automation&color=white&dpr=2"
+                webpSrc="https://img.usecurling.com/p/800/600?q=dashboard%20software%20interface%20automation&color=white&dpr=2&format=webp"
                 alt="Dashboard de Automação"
                 className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
               />
             </div>
 

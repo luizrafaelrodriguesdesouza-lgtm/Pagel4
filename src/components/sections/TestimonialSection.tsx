@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useState, useCallback } from 'react'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
+import { useLocalStorageCache } from '@/hooks/use-local-storage-cache'
 import { Card, CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 import { Skeleton } from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
 import { Quote, AlertCircle } from 'lucide-react'
+import { OptimizedImage } from '@/components/ui/optimized-image'
 
 const mockTestimonials = [
   {
@@ -34,16 +37,25 @@ const mockTestimonials = [
 
 export function TestimonialSection() {
   const { ref, isVisible } = useScrollAnimation()
-  const [status, setStatus] = useState<'loading' | 'success' | 'error' | 'empty'>('loading')
-  const [data, setData] = useState<typeof mockTestimonials>([])
+  const [visibleCount, setVisibleCount] = useState(3)
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setData(mockTestimonials)
-      setStatus('success')
-    }, 1500)
-    return () => clearTimeout(timer)
+  const fetchTestimonials = useCallback(async () => {
+    return new Promise<typeof mockTestimonials>((resolve) => {
+      setTimeout(() => resolve(mockTestimonials), 1000)
+    })
   }, [])
+
+  const { data, loading, error } = useLocalStorageCache('testimonials_cache', fetchTestimonials, 60)
+
+  const status = loading
+    ? 'loading'
+    : error
+      ? 'error'
+      : !data || data.length === 0
+        ? 'empty'
+        : 'success'
+  const visibleData = data ? data.slice(0, visibleCount) : []
+  const hasMore = data && visibleCount < data.length
 
   return (
     <section className="py-24 bg-white text-zinc-950 overflow-hidden">
@@ -104,7 +116,7 @@ export function TestimonialSection() {
             <div className="md:hidden w-full">
               <Carousel className="w-full" opts={{ loop: true }}>
                 <CarouselContent>
-                  {data.map((item) => (
+                  {visibleData.map((item) => (
                     <CarouselItem key={item.id} className="basis-full">
                       <Card className="h-full bg-white shadow-sm border-zinc-200 mx-1">
                         <CardContent className="p-6 flex flex-col h-full justify-between gap-6">
@@ -113,7 +125,7 @@ export function TestimonialSection() {
                             "{item.quote}"
                           </p>
                           <div className="flex items-center gap-4 mt-auto">
-                            <img
+                            <OptimizedImage
                               src={item.avatar}
                               alt={item.name}
                               className="w-12 h-12 rounded-full object-cover"
@@ -132,7 +144,7 @@ export function TestimonialSection() {
             </div>
 
             <div className="hidden md:grid md:grid-cols-3 gap-8">
-              {data.map((item) => (
+              {visibleData.map((item) => (
                 <Card
                   key={item.id}
                   className="h-full bg-white shadow-sm hover:shadow-md transition-all duration-300 border-zinc-200 hover:-translate-y-1"
@@ -141,7 +153,7 @@ export function TestimonialSection() {
                     <Quote className="w-8 h-8 text-primary/30" />
                     <p className="text-zinc-600 text-lg leading-relaxed flex-1">"{item.quote}"</p>
                     <div className="flex items-center gap-4 mt-auto">
-                      <img
+                      <OptimizedImage
                         src={item.avatar}
                         alt={item.name}
                         className="w-12 h-12 rounded-full object-cover"
@@ -157,6 +169,19 @@ export function TestimonialSection() {
                 </Card>
               ))}
             </div>
+
+            {hasMore && (
+              <div className="mt-12 text-center animate-fade-in">
+                <Button
+                  onClick={() => setVisibleCount((prev) => prev + 3)}
+                  variant="outline"
+                  size="lg"
+                  className="rounded-full px-8 border-zinc-200 text-zinc-700 hover:bg-zinc-50 transition-all hover:-translate-y-1"
+                >
+                  Carregar mais
+                </Button>
+              </div>
+            )}
           </>
         )}
       </div>
