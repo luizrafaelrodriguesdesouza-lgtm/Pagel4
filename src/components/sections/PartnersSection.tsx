@@ -1,5 +1,5 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import { Handshake } from 'lucide-react'
+import { Handshake, Workflow } from 'lucide-react'
 
 export function PartnersSection() {
   const { ref, isVisible } = useScrollAnimation()
@@ -27,6 +27,12 @@ export function PartnersSection() {
               <Handshake className="w-8 h-8 text-blue-500" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-foreground">Kommo</span>
+          </div>
+          <div className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+            <div className="bg-orange-500/20 p-2 rounded-lg">
+              <Workflow className="w-8 h-8 text-orange-500" />
+            </div>
+            <span className="text-2xl font-bold tracking-tight text-foreground">n8n</span>
           </div>
         </div>
       </div>

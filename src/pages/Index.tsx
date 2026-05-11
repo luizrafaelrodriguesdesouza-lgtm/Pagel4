@@ -9,6 +9,8 @@ import { AuthoritySection } from '@/components/sections/AuthoritySection'
 import { FaqSection } from '@/components/sections/FaqSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { FormularioLead } from '@/components/sections/FormularioLead'
+import { TestimonialSection } from '@/components/sections/TestimonialSection'
+import { MetricsSection } from '@/components/sections/MetricsSection'
 
 const Index = () => {
   return (
@@ -16,6 +18,8 @@ const Index = () => {
       <HeroSection />
       <BenefitsSection />
       <FormularioLead />
+      <TestimonialSection />
+      <MetricsSection />
       <PartnersSection />
       <ProblemSection />
       <SolutionSection />
