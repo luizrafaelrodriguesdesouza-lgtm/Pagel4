@@ -1,11 +1,21 @@
 import { ArrowRight, Bot, Workflow } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import logoUrl from '@/assets/editedimage1775550192392-591da.png'
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/1920/1080?q=robot%20artificial%20intelligence&color=green')] bg-cover bg-center opacity-10 mix-blend-luminosity" />
+        <div
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{
+            backgroundImage: `url(${logoUrl})`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'max(400px, 40vw)',
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
         <div className="w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
