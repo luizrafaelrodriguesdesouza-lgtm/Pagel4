@@ -1,87 +1,207 @@
-import { ArrowRight, Bot, Workflow } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { ArrowRight, Play, AlertCircle, Bot, Workflow } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Skeleton } from '@/components/ui/skeleton'
 import logoUrl from '@/assets/editedimage1775550192392-591da.png'
 
+interface HeroData {
+  title: string
+  subtitle: string
+  primaryCta: string
+  secondaryCta: string
+}
+
 export function HeroSection() {
-  return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/1920/1080?q=robot%20artificial%20intelligence&color=green')] bg-cover bg-center opacity-10 mix-blend-luminosity" />
-        <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage: `url(${logoUrl})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'max(400px, 40vw)',
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        <div className="w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+  const [status, setStatus] = useState<'loading' | 'error' | 'empty' | 'success'>('loading')
+  const [data, setData] = useState<HeroData | null>(null)
 
-        <div className="absolute top-1/4 left-[10%] border border-primary/50 p-4 rounded-xl rotate-12 animate-float bg-background/50 backdrop-blur-sm hidden lg:block">
-          <Workflow className="w-12 h-12 text-primary" />
-        </div>
-        <div
-          className="absolute bottom-1/4 right-[10%] border border-primary/50 p-4 rounded-xl -rotate-12 animate-float bg-background/50 backdrop-blur-sm hidden lg:block"
-          style={{ animationDelay: '1s' }}
-        >
-          <Bot className="w-12 h-12 text-primary" />
-        </div>
-      </div>
+  useEffect(() => {
+    // Simulate data loading to satisfy the UX states criteria
+    const timer = setTimeout(() => {
+      try {
+        const fetchedData = {
+          title: 'Operação Inteligente & Automatizada',
+          subtitle:
+            'Transforme seus processos manuais em automação inteligente. Economize tempo, reduza erros, aumente receita.',
+          primaryCta: 'Diagnóstico Gratuito',
+          secondaryCta: 'Ver Demo',
+        }
 
-      <div className="container relative z-10 px-4 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-left animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full bg-primary/10 text-primary mb-8 border border-primary/20">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Operação Inteligente & Automatizada
+        if (!fetchedData.title) {
+          setStatus('empty')
+          return
+        }
+
+        setData(fetchedData)
+        setStatus('success')
+      } catch (err) {
+        setStatus('error')
+      }
+    }, 1200)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (status === 'loading') {
+    return (
+      <section className="relative min-h-screen flex items-center pt-20 bg-white overflow-hidden">
+        <div className="container relative z-10 px-4 mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <Skeleton className="h-16 w-3/4 bg-slate-100" />
+              <Skeleton className="h-16 w-1/2 bg-slate-100" />
+              <Skeleton className="h-24 w-full bg-slate-100 mt-6" />
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Skeleton className="h-14 w-full sm:w-48 bg-slate-100" />
+                <Skeleton className="h-14 w-full sm:w-40 bg-slate-100" />
+              </div>
             </div>
+            <div className="hidden lg:block">
+              <Skeleton className="w-full aspect-square md:aspect-[4/3] rounded-2xl bg-slate-100" />
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-6 leading-tight">
-              Sua Empresa Transformada em uma{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-300">
-                Máquina de Vendas 24/7
-              </span>
+  if (status === 'error') {
+    return (
+      <section className="relative min-h-screen flex items-center justify-center bg-white">
+        <div className="text-center space-y-4 px-4 animate-fade-in">
+          <AlertCircle className="w-12 h-12 text-destructive mx-auto" />
+          <h2 className="text-2xl font-bold text-slate-900">Ocorreu um erro ao carregar</h2>
+          <p className="text-slate-500">Não foi possível carregar as informações.</p>
+          <Button
+            onClick={() => setStatus('loading')}
+            variant="outline"
+            className="mt-4 border-slate-200 text-slate-700"
+          >
+            Tentar novamente
+          </Button>
+        </div>
+      </section>
+    )
+  }
+
+  if (status === 'empty' || !data) {
+    return (
+      <section className="relative min-h-screen flex items-center justify-center bg-white">
+        <div className="text-center space-y-4 px-4 animate-fade-in">
+          <h2 className="text-2xl font-bold text-slate-900">Conteúdo não encontrado</h2>
+          <p className="text-slate-500">
+            As informações desta seção não estão disponíveis no momento.
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-white text-slate-900">
+      {/* Background with dot pattern */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] opacity-60" />
+
+      {/* Subtle Background Branding (Watermark) */}
+      <div
+        className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-no-repeat bg-center"
+        style={{
+          backgroundImage: `url(${logoUrl})`,
+          backgroundSize: 'max(400px, 40vw)',
+        }}
+      />
+
+      {/* Soft gradient to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/80 pointer-events-none z-0" />
+
+      <div className="container relative z-10 px-4 mx-auto mt-10 lg:mt-0">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="text-left space-y-8 max-w-2xl pt-8 lg:pt-0">
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] animate-fade-in-up"
+              style={{ animationFillMode: 'both', animationDelay: '0.1s' }}
+            >
+              {data.title}
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
-              Pare de perder leads e dinheiro com processos manuais. Eleve sua maturidade
-              operacional com automações inteligentes e IA que trabalham enquanto você escala seu
-              lucro.
+            <p
+              className="text-lg md:text-xl text-slate-600 leading-relaxed animate-fade-in-up"
+              style={{ animationFillMode: 'both', animationDelay: '0.3s' }}
+            >
+              {data.subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div
+              className="flex flex-col sm:flex-row gap-4 items-start pt-2 animate-fade-in-up"
+              style={{ animationFillMode: 'both', animationDelay: '0.5s' }}
+            >
               <Button
                 size="lg"
-                className="h-14 px-8 text-lg glow-hover w-full sm:w-auto"
-                onClick={() =>
-                  window.open(
-                    'https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o',
-                    '_blank',
-                  )
-                }
+                className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all hover:scale-105"
+                onClick={() => {
+                  const form = document.querySelector('form')
+                  if (form) {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                  } else {
+                    window.open(
+                      'https://wa.me/5521967578095?text=Ol%C3%A1,%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito',
+                      '_blank',
+                    )
+                  }
+                }}
               >
-                Diagnóstico Gratuito de Automação
+                {data.primaryCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 px-8 text-lg w-full sm:w-auto border-slate-300 text-slate-700 hover:bg-slate-50 transition-all hover:scale-105 bg-white/50 backdrop-blur-sm"
+              >
+                <Play className="mr-2 h-5 w-5" />
+                {data.secondaryCta}
               </Button>
             </div>
           </div>
 
           <div
-            className="relative hidden lg:block animate-fade-in-up"
-            style={{ animationDelay: '0.2s' }}
+            className="relative w-full aspect-square md:aspect-[4/3] animate-fade-in-up mt-8 lg:mt-0"
+            style={{ animationFillMode: 'both', animationDelay: '0.7s' }}
           >
-            <div className="relative rounded-2xl overflow-hidden border border-border/50 glow-hover group">
+            {/* Decorative background blur behind image */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-200 to-blue-100 rounded-[2rem] transform rotate-3 scale-105 opacity-50 blur-2xl" />
+
+            <div className="relative h-full w-full rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white flex items-center justify-center p-2 group">
               <img
-                src="https://img.usecurling.com/p/800/800?q=cyborg%20ai&color=green&dpr=2"
-                alt="Inteligência Artificial Raphael L4"
-                className="w-full h-auto object-cover opacity-90 mix-blend-lighten transition-transform duration-1000 group-hover:scale-105"
+                src="https://img.usecurling.com/p/800/600?q=dashboard%20software%20interface%20automation&color=white&dpr=2"
+                alt="Dashboard de Automação"
+                className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background via-background/20 to-transparent" />
+            </div>
+
+            {/* Floating UI elements for a modern feel */}
+            <div className="absolute -left-6 top-1/4 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 animate-float hidden md:flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+                <Workflow className="text-emerald-600 w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-900">Fluxos Ativos</p>
+                <p className="text-xs text-slate-500">Operando 24/7</p>
+              </div>
+            </div>
+
+            <div
+              className="absolute -right-6 bottom-1/4 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 animate-float hidden md:flex items-center gap-3"
+              style={{ animationDelay: '2s' }}
+            >
+              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                <Bot className="text-blue-600 w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-900">IA Integrada</p>
+                <p className="text-xs text-slate-500">Respostas automáticas</p>
+              </div>
             </div>
           </div>
         </div>
