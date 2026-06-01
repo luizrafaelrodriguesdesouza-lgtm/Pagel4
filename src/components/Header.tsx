@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, Instagram } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
+import logoUrl from '@/assets/editedimage1780319473364-fd281.png'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,7 +31,11 @@ export default function Header() {
     <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
       <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-6 md:px-12 lg:px-16">
         <a href="#" className="flex items-center gap-2 pr-12">
-          <span className="text-2xl font-extrabold tracking-tight glow-text text-primary">L4</span>
+          <img
+            src={logoUrl}
+            alt="Raphael L4 Integrações"
+            className="h-8 md:h-10 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden md:flex flex-1 items-center justify-end gap-6 lg:gap-8">

@@ -1,11 +1,16 @@
-import logoUrl from '@/assets/editedimage1775550192392-591da.png'
+import logoUrl from '@/assets/editedimage1780319473364-fd281.png'
 
 export default function Footer() {
   return (
     <footer className="border-t border-border/40 py-8 bg-background">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-          <img src={logoUrl} alt="Raphael L4 Logo" className="h-12 w-auto object-contain" />
+          <img
+            src={logoUrl}
+            alt="Raphael L4 Integrações"
+            loading="lazy"
+            className="h-12 w-auto object-contain"
+          />
           <div>
             <p className="text-lg font-bold tracking-tight text-primary">Raphael L4</p>
             <p className="text-sm text-muted-foreground mt-1">Transformando operações com IA.</p>

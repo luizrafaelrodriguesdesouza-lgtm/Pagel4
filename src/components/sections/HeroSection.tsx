@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { ArrowRight, Play, AlertCircle, Bot, Workflow } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
-import logoUrl from '@/assets/editedimage1775550192392-591da.png'
+import logoUrl from '@/assets/editedimage1780319473364-fd281.png'
 import { OptimizedImage } from '@/components/ui/optimized-image'
 
 interface HeroData {
