@@ -15,26 +15,27 @@ type Benefit = {
 const BENEFITS: Benefit[] = [
   {
     id: '1',
-    title: 'Atendimento Instantâneo',
-    description: 'Respostas imediatas no WhatsApp e Instagram 24/7',
-    icon: Clock,
+    title: 'API Oficial da Meta',
+    description: 'Segurança total. Operação fluida e blindada contra banimentos no WhatsApp.',
+    icon: ShieldCheck,
   },
   {
     id: '2',
     title: 'Qualificação Automática',
-    description: 'Agentes de IA conversam, entendem necessidade e classificam leads',
+    description: 'Agentes de IA conversam, entendem a necessidade e classificam leads 24/7.',
     icon: Bot,
   },
   {
     id: '3',
-    title: 'Segurança Total',
-    description: 'Proteja dados dos clientes com criptografia de ponta a ponta',
-    icon: ShieldCheck,
+    title: 'Velocidade de IA',
+    description: 'Respostas imediatas garantindo que você venda para quem responde primeiro.',
+    icon: Clock,
   },
   {
     id: '4',
-    title: 'Estabilidade Máxima',
-    description: 'Sem quedas, sem desconexões. Operação fluida em servidores robustos',
+    title: 'Atendimento Humano',
+    description:
+      'Transição suave da IA para sua equipe quando o lead já está quente e qualificado.',
     icon: Activity,
   },
 ]
@@ -61,7 +62,7 @@ export function BenefitsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={cn('text-center mb-16', isIntersecting && 'animate-fade-in-up')}>
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Vantagens Competitivas
+            Atendimento Humano, Velocidade de IA, Segurança de API.
           </h2>
           <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
             Benefícios exclusivos projetados para escalar suas vendas e elevar a maturidade

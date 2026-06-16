@@ -3,7 +3,9 @@ import pb from '@/lib/pocketbase/client'
 export const createLead = (data: {
   name: string
   email: string
-  company: string
   phone: string
+  company: string
   message?: string
-}) => pb.collection('leads').create(data)
+}) => {
+  return pb.collection('leads').create(data)
+}

@@ -12,7 +12,7 @@ export function PartnersSection() {
         }`}
       >
         <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">
-          Parceiros Oficiais
+          Não entregamos apenas mensagens, entregamos processos orquestrados
         </p>
         <div className="flex flex-wrap justify-center gap-6 md:gap-12 lg:gap-14 items-center">
           <div className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 group">

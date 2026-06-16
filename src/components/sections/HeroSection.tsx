@@ -21,10 +21,11 @@ export function HeroSection() {
     const timer = setTimeout(() => {
       try {
         const fetchedData = {
-          title: 'Operação Inteligente & Automatizada',
+          title:
+            'Pare de perder vendas por demora no WhatsApp: Atendimento Instantâneo com IA e API Oficial.',
           subtitle:
-            'Transforme seus processos manuais em automação inteligente. Economize tempo, reduza erros, aumente receita.',
-          primaryCta: 'Diagnóstico Gratuito',
+            'Transformamos seu WhatsApp em uma máquina de vendas que qualifica leads e fecha negócios 24/7, com a segurança da infraestrutura oficial da Meta.',
+          primaryCta: 'Solicitar Auditoria de Maturidade Gratuita',
           secondaryCta: 'Ver Demo',
         }
 
@@ -140,12 +141,12 @@ export function HeroSection() {
                 size="lg"
                 className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all hover:scale-105"
                 onClick={() => {
-                  const form = document.querySelector('form')
+                  const form = document.getElementById('lead-form')
                   if (form) {
-                    form.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                    form.scrollIntoView({ behavior: 'smooth', block: 'start' })
                   } else {
                     window.open(
-                      'https://wa.me/5521967578095?text=Ol%C3%A1,%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito',
+                      'https://wa.me/5521967578095?text=Ol%C3%A1,%20gostaria%20de%20uma%20auditoria%20de%20maturidade',
                       '_blank',
                     )
                   }

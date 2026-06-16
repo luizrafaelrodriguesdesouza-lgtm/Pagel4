@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Loader2, CheckCircle2 } from 'lucide-react'
@@ -39,6 +40,7 @@ const formSchema = z.object({
   email: z.string().email('Email inválido').min(1, 'Campo obrigatório'),
   phone: z.string().min(14, 'Telefone inválido').max(15, 'Telefone inválido'),
   company: z.string().min(1, 'Campo obrigatório'),
+  message: z.string().optional(),
 })
 
 export function FormularioLead() {
@@ -54,6 +56,7 @@ export function FormularioLead() {
       email: '',
       phone: '',
       company: '',
+      message: '',
     },
   })
 
@@ -73,6 +76,7 @@ export function FormularioLead() {
         email: values.email,
         phone: values.phone,
         company: values.company,
+        message: values.message,
       })
       setIsSuccess(true)
     } catch (error) {
@@ -85,14 +89,15 @@ export function FormularioLead() {
   }
 
   return (
-    <section className="py-24 bg-gray-50 flex justify-center items-center px-4">
+    <section id="lead-form" className="py-24 bg-gray-50 flex justify-center items-center px-4">
       <Card className="w-full max-w-3xl bg-white shadow-xl animate-fade-in-up">
         <CardHeader className="text-center pt-8">
           <CardTitle className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
-            Diagnóstico Gratuito de Automação
+            Auditoria de Maturidade Operacional
           </CardTitle>
           <CardDescription className="text-lg md:text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
-            Descubra quanto tempo e dinheiro você pode economizar com automação inteligente.
+            Descubra o custo invisível da sua demora e como a automação com IA pode revolucionar
+            suas vendas.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-8">
@@ -177,6 +182,25 @@ export function FormularioLead() {
                     )}
                   />
                 </div>
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-700 font-medium">
+                        Mensagem (opcional)
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea
+                          className="min-h-[100px]"
+                          placeholder="Como podemos ajudar sua empresa?"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
                 <Button
                   type="submit"
                   className="w-full h-14 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg mt-8"

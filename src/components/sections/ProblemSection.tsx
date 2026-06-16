@@ -9,20 +9,17 @@ export function ProblemSection() {
     {
       icon: Droplets,
       title: 'Leads Perdidos',
-      description:
-        'Respostas demoradas esfriam o cliente. Cada minuto de atraso no atendimento é dinheiro que escorre pelo ralo.',
+      description: 'Venda para quem responde primeiro.',
     },
     {
       icon: Clock,
-      title: 'Demora no Atendimento',
-      description:
-        'Gargalos no WhatsApp geram frustração. Sua equipe perde tempo com tarefas repetitivas em vez de fechar vendas.',
+      title: 'Equipe Sobrecarregada',
+      description: 'IA responde o básico.',
     },
     {
       icon: Unlink,
-      title: 'Erro Humano',
-      description:
-        'Atualizações manuais no CRM falham frequentemente, causando perda de histórico e oportunidades esquecidas.',
+      title: 'Caos Operacional',
+      description: 'Dados perdidos sem CRM.',
     },
   ]
 
@@ -36,7 +33,7 @@ export function ProblemSection() {
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-            O Custo do <span className="text-destructive">Caos Manual</span>
+            O custo invisível da sua <span className="text-destructive">demora</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Processos não otimizados não apenas frustram sua equipe, mas corroem ativamente sua
