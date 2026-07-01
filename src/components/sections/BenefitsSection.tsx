@@ -16,13 +16,15 @@ const BENEFITS: Benefit[] = [
   {
     id: '1',
     title: 'API Oficial da Meta',
-    description: 'Segurança total. Operação fluida e blindada contra banimentos no WhatsApp.',
+    description:
+      'Segurança total. Operação fluida e blindada contra banimentos no WhatsApp da sua farmácia.',
     icon: ShieldCheck,
   },
   {
     id: '2',
     title: 'Qualificação Automática',
-    description: 'Agentes de IA conversam, entendem a necessidade e classificam leads 24/7.',
+    description:
+      'Agentes de IA conversam, entendem a necessidade e qualificam leads de farmácia 24/7.',
     icon: Bot,
   },
   {

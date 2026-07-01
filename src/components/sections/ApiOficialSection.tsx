@@ -1,6 +1,7 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import { ShieldCheck, Server, Ban, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import deliveryImg from '@/assets/generatedimage1781836802038-c5221.png'
 
 export function ApiOficialSection() {
   const { ref, isVisible } = useScrollAnimation()
@@ -73,21 +74,21 @@ export function ApiOficialSection() {
               className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-[0_0_20px_rgba(5,150,105,0.3)] hover:shadow-[0_0_30px_rgba(5,150,105,0.5)] transition-all"
               onClick={() =>
                 window.open(
-                  'https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20de%20API%20oficial',
+                  'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa',
                   '_blank',
                 )
               }
             >
-              Quero saber mais sobre a API Oficial
+              Solicitar Orçamento Rápido
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
 
           <div className="relative rounded-2xl overflow-hidden border border-border/50 glow-hover aspect-square max-w-md mx-auto w-full group">
             <img
-              src="https://img.usecurling.com/p/600/600?q=robot%20server&color=green&dpr=2"
-              alt="Servidor e Robô da API Oficial"
-              className="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
+              src={deliveryImg}
+              alt="Entregas Rápidas da Farmácia"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent" />
           </div>

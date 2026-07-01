@@ -3,7 +3,7 @@ import { ArrowRight, Play, AlertCircle, Bot, Workflow } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import logoUrl from '@/assets/editedimage1780319473364-fd281.png'
-import { OptimizedImage } from '@/components/ui/optimized-image'
+import pharmacyImg from '@/assets/generatedimage1781836123150-85c91.png'
 
 interface HeroData {
   title: string
@@ -22,10 +22,10 @@ export function HeroSection() {
       try {
         const fetchedData = {
           title:
-            'Pare de perder vendas por demora no WhatsApp: Atendimento Instantâneo com IA e API Oficial.',
+            'Pare de perder vendas na sua Farmácia por demora no WhatsApp: Atendimento Instantâneo com IA e API Oficial.',
           subtitle:
-            'Transformamos seu WhatsApp em uma máquina de vendas que qualifica leads e fecha negócios 24/7, com a segurança da infraestrutura oficial da Meta.',
-          primaryCta: 'Solicitar Auditoria de Maturidade Gratuita',
+            'Transformamos o WhatsApp da sua farmácia em uma máquina de vendas que qualifica pedidos, tira dúvidas e organiza entregas 24/7, com a segurança da infraestrutura oficial da Meta.',
+          primaryCta: 'Solicitar Orçamento Rápido',
           secondaryCta: 'Ver Demo',
         }
 
@@ -141,15 +141,10 @@ export function HeroSection() {
                 size="lg"
                 className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all hover:scale-105"
                 onClick={() => {
-                  const form = document.getElementById('lead-form')
-                  if (form) {
-                    form.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  } else {
-                    window.open(
-                      'https://wa.me/5521967578095?text=Ol%C3%A1,%20gostaria%20de%20uma%20auditoria%20de%20maturidade',
-                      '_blank',
-                    )
-                  }
+                  window.open(
+                    'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa',
+                    '_blank',
+                  )
                 }}
               >
                 {data.primaryCta}
@@ -174,10 +169,9 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-200 to-blue-100 rounded-[2rem] transform rotate-3 scale-105 opacity-50 blur-2xl" />
 
             <div className="relative h-full w-full rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white flex items-center justify-center p-2 group">
-              <OptimizedImage
-                src="https://img.usecurling.com/p/800/600?q=dashboard%20software%20interface%20automation&color=white&dpr=2"
-                webpSrc="https://img.usecurling.com/p/800/600?q=dashboard%20software%20interface%20automation&color=white&dpr=2&format=webp"
-                alt="Dashboard de Automação"
+              <img
+                src={pharmacyImg}
+                alt="Atendimento de Automação na Farmácia"
                 className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
               />
             </div>

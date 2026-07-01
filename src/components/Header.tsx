@@ -24,8 +24,7 @@ export default function Header() {
     }
   }
 
-  const whatsappLink =
-    'https://wa.me/5521967578095?text=Ol%C3%A1,%20preciso%20saber%20mais%20sobre%20automa%C3%A7%C3%A3o'
+  const formLink = 'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa'
 
   return (
     <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
@@ -57,8 +56,8 @@ export default function Header() {
           >
             <Instagram className="h-5 w-5" />
           </a>
-          <Button className="glow-hover" onClick={() => window.open(whatsappLink, '_blank')}>
-            Diagnóstico Gratuito de Automação
+          <Button className="glow-hover" onClick={() => window.open(formLink, '_blank')}>
+            Solicitar Orçamento Rápido
           </Button>
         </nav>
 
@@ -94,9 +93,9 @@ export default function Header() {
                 </a>
                 <Button
                   className="w-full mt-4 glow-hover"
-                  onClick={() => window.open(whatsappLink, '_blank')}
+                  onClick={() => window.open(formLink, '_blank')}
                 >
-                  Diagnóstico Gratuito de Automação
+                  Solicitar Orçamento Rápido
                 </Button>
               </nav>
             </SheetContent>

@@ -84,8 +84,7 @@ export function SolutionSection() {
               <div className="p-4 space-y-4 h-[400px] overflow-y-auto bg-[url('https://img.usecurling.com/p/800/600?q=pattern&color=black&dpr=1')] bg-cover bg-center bg-blend-overlay bg-black/60 relative z-10">
                 <div className="bg-zinc-800 rounded-lg rounded-tl-none p-3 max-w-[80%] border border-border/30">
                   <p className="text-sm">
-                    Olá! Vi que você tem interesse em automatizar seus processos. Como posso te
-                    ajudar hoje?
+                    Olá! Seja bem-vindo à nossa farmácia. Como posso te ajudar hoje?
                   </p>
                   <span className="text-[10px] text-muted-foreground block mt-1 text-right">
                     09:41
@@ -94,16 +93,15 @@ export function SolutionSection() {
 
                 <div className="bg-primary/20 text-primary-foreground rounded-lg rounded-tr-none p-3 max-w-[80%] ml-auto border border-primary/30">
                   <p className="text-sm text-foreground">
-                    Minha equipe de vendas demora muito para responder no WhatsApp. Perdemos vendas.
+                    Vocês entregam dipirona e vitamina C no meu bairro? Moro no Centro.
                   </p>
                   <span className="text-[10px] text-primary/70 block mt-1 text-right">09:42</span>
                 </div>
 
                 <div className="bg-zinc-800 rounded-lg rounded-tl-none p-3 max-w-[80%] border border-border/30 animate-fade-in-up">
                   <p className="text-sm">
-                    Entendo perfeitamente. Com nossas soluções, o tempo de resposta cai para zero e
-                    a IA qualifica o lead antes de passar para um humano. Qual o seu volume atual de
-                    atendimentos por dia?
+                    Entregamos sim! Nossas entregas para o Centro levam cerca de 20 minutos.
+                    Gostaria de adicionar mais algum item ao seu pedido e fechar a compra?
                   </p>
                   <span className="text-[10px] text-muted-foreground block mt-1 text-right">
                     09:42
@@ -112,7 +110,7 @@ export function SolutionSection() {
 
                 <div className="flex items-center justify-center my-4">
                   <span className="text-[10px] bg-zinc-950/80 px-2 py-1 rounded-full text-muted-foreground border border-border/50">
-                    Lead Qualificado - CRM Atualizado
+                    Pedido Qualificado - Direto pro Entregador
                   </span>
                 </div>
               </div>

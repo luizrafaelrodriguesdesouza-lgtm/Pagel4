@@ -31,9 +31,6 @@ const FaqSection = lazy(() =>
 const CtaSection = lazy(() =>
   import('@/components/sections/CtaSection').then((m) => ({ default: m.CtaSection })),
 )
-const FormularioLead = lazy(() =>
-  import('@/components/sections/FormularioLead').then((m) => ({ default: m.FormularioLead })),
-)
 const TestimonialSection = lazy(() =>
   import('@/components/sections/TestimonialSection').then((m) => ({
     default: m.TestimonialSection,
@@ -60,9 +57,6 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <BenefitsSection />
-      </Suspense>
-      <Suspense fallback={<SectionLoader />}>
-        <FormularioLead />
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <TestimonialSection />

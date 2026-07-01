@@ -8,19 +8,14 @@ export function CtaSection() {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleCtaClick = () => {
-    const form = document.getElementById('lead-form')
-    if (form) {
-      form.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else {
-      setIsLoading(true)
-      setTimeout(() => {
-        window.open(
-          'https://wa.me/5521967578095?text=Ol%C3%A1,%20gostaria%20de%20uma%20auditoria%20de%20maturidade',
-          '_blank',
-        )
-        setIsLoading(false)
-      }, 800)
-    }
+    setIsLoading(true)
+    setTimeout(() => {
+      window.open(
+        'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa',
+        '_blank',
+      )
+      setIsLoading(false)
+    }, 800)
   }
 
   return (
@@ -37,12 +32,13 @@ export function CtaSection() {
           <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/800/400?q=noise&color=black')] opacity-20 mix-blend-overlay pointer-events-none" />
 
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-            Pronto para <span className="text-primary">profissionalizar seu lucro?</span>
+            Pronto para{' '}
+            <span className="text-primary">profissionalizar o lucro da sua farmácia?</span>
           </h2>
 
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Dê o primeiro passo para elevar a maturidade operacional da sua empresa. Solicite uma
-            Auditoria de Maturidade com nossos especialistas.
+            Dê o primeiro passo para elevar a maturidade operacional da sua farmácia. Solicite um
+            orçamento com nossos especialistas e revolucione o seu atendimento.
           </p>
 
           <Button
@@ -52,7 +48,7 @@ export function CtaSection() {
             disabled={isLoading}
           >
             {isLoading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null}
-            Quero minha Auditoria de Maturidade Operacional
+            Quero meu Orçamento de Automação
             {!isLoading && (
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             )}

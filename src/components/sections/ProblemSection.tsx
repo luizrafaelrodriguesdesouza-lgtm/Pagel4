@@ -8,18 +8,18 @@ export function ProblemSection() {
   const problems = [
     {
       icon: Droplets,
-      title: 'Leads Perdidos',
-      description: 'Venda para quem responde primeiro.',
+      title: 'Vendas Perdidas',
+      description: 'O cliente compra na farmácia que responder primeiro.',
     },
     {
       icon: Clock,
-      title: 'Equipe Sobrecarregada',
-      description: 'IA responde o básico.',
+      title: 'Balconistas Sobrecarregados',
+      description: 'A IA filtra dúvidas básicas, horários e disponibilidade de medicamentos.',
     },
     {
       icon: Unlink,
       title: 'Caos Operacional',
-      description: 'Dados perdidos sem CRM.',
+      description: 'Pedidos e dados de clientes perdidos sem integração com CRM.',
     },
   ]
 
