@@ -9,6 +9,7 @@ export default function Header() {
 
   const links = [
     { href: '#problemas', label: 'Problemas' },
+    { href: '#seguranca', label: 'Segurança' },
     { href: '#solucao', label: 'Solução' },
     { href: '#comparativo', label: 'Comparativo' },
     { href: '#api-oficial', label: 'API Oficial' },

@@ -19,6 +19,11 @@ const SolutionSection = lazy(() =>
 const ComparisonSection = lazy(() =>
   import('@/components/sections/ComparisonSection').then((m) => ({ default: m.ComparisonSection })),
 )
+const SecurityAntiBanSection = lazy(() =>
+  import('@/components/sections/SecurityAntiBanSection').then((m) => ({
+    default: m.SecurityAntiBanSection,
+  })),
+)
 const ApiOficialSection = lazy(() =>
   import('@/components/sections/ApiOficialSection').then((m) => ({ default: m.ApiOficialSection })),
 )
@@ -54,6 +59,9 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <ProblemSection />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <SecurityAntiBanSection />
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <BenefitsSection />
