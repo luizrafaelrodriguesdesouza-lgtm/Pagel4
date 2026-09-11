@@ -1,105 +1,26 @@
-import { useState, useEffect } from 'react'
-import { ArrowRight, Play, AlertCircle, Bot, Workflow } from 'lucide-react'
+import { ArrowRight, Play, Bot, Workflow } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Skeleton } from '@/components/ui/skeleton'
 import logoUrl from '@/assets/editedimage1780319473364-fd281.png'
 import pharmacyImg from '@/assets/generatedimage1781836123150-85c91.png'
 
-interface HeroData {
-  title: string
-  subtitle: string
-  primaryCta: string
-  secondaryCta: string
+const HERO_CONTENT = {
+  title: 'Automatize o WhatsApp da sua farmácia e venda mais.',
+  subtitle:
+    'Atendimento instantâneo 24/7, gestão de entregas em tempo real e a segurança da API oficial da Meta.',
+  primaryCta: 'Solicitar Orçamento',
+  secondaryCta: 'Ver Demonstração',
 }
 
 export function HeroSection() {
-  const [status, setStatus] = useState<'loading' | 'error' | 'empty' | 'success'>('loading')
-  const [data, setData] = useState<HeroData | null>(null)
-
-  useEffect(() => {
-    // Simulate data loading to satisfy the UX states criteria
-    const timer = setTimeout(() => {
-      try {
-        const fetchedData = {
-          title: 'Automatize o WhatsApp da sua farmácia e venda mais.',
-          subtitle:
-            'Atendimento instantâneo 24/7, gestão de entregas em tempo real e a segurança da API oficial da Meta.',
-          primaryCta: 'Solicitar Orçamento',
-          secondaryCta: 'Ver Demonstração',
-        }
-
-        if (!fetchedData.title) {
-          setStatus('empty')
-          return
-        }
-
-        setData(fetchedData)
-        setStatus('success')
-      } catch (err) {
-        setStatus('error')
-      }
-    }, 1200)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (status === 'loading') {
-    return (
-      <section className="relative min-h-screen flex items-center pt-20 bg-white overflow-hidden">
-        <div className="container relative z-10 px-4 mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <Skeleton className="h-16 w-3/4 bg-slate-100" />
-              <Skeleton className="h-16 w-1/2 bg-slate-100" />
-              <Skeleton className="h-24 w-full bg-slate-100 mt-6" />
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Skeleton className="h-14 w-full sm:w-48 bg-slate-100" />
-                <Skeleton className="h-14 w-full sm:w-40 bg-slate-100" />
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <Skeleton className="w-full aspect-square md:aspect-[4/3] rounded-2xl bg-slate-100" />
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (status === 'error') {
-    return (
-      <section className="relative min-h-screen flex items-center justify-center bg-white">
-        <div className="text-center space-y-4 px-4 animate-fade-in">
-          <AlertCircle className="w-12 h-12 text-destructive mx-auto" />
-          <h2 className="text-2xl font-bold text-slate-900">Ocorreu um erro ao carregar</h2>
-          <p className="text-slate-500">Não foi possível carregar as informações.</p>
-          <Button
-            onClick={() => setStatus('loading')}
-            variant="outline"
-            className="mt-4 border-slate-200 text-slate-700"
-          >
-            Tentar novamente
-          </Button>
-        </div>
-      </section>
-    )
-  }
-
-  if (status === 'empty' || !data) {
-    return (
-      <section className="relative min-h-screen flex items-center justify-center bg-white">
-        <div className="text-center space-y-4 px-4 animate-fade-in">
-          <h2 className="text-2xl font-bold text-slate-900">Conteúdo não encontrado</h2>
-          <p className="text-slate-500">
-            As informações desta seção não estão disponíveis no momento.
-          </p>
-        </div>
-      </section>
-    )
+  const scrollToDemo = () => {
+    const section = document.getElementById('gestao-entregas')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-white text-slate-900">
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center pt-16 pb-16 overflow-hidden bg-white text-slate-900">
       {/* Background with dot pattern */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] opacity-60" />
 
@@ -115,30 +36,21 @@ export function HeroSection() {
       {/* Soft gradient to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/80 pointer-events-none z-0" />
 
-      <div className="container relative z-10 px-4 mx-auto mt-10 lg:mt-0">
+      <div className="container relative z-10 px-4 mx-auto my-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="text-left space-y-8 max-w-2xl pt-8 lg:pt-0">
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] animate-fade-in-up"
-              style={{ animationFillMode: 'both', animationDelay: '0.1s' }}
-            >
-              {data.title}
+          <div className="text-left space-y-8 max-w-2xl pt-4 lg:pt-0">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+              {HERO_CONTENT.title}
             </h1>
 
-            <p
-              className="text-lg md:text-xl text-slate-600 leading-relaxed animate-fade-in-up"
-              style={{ animationFillMode: 'both', animationDelay: '0.3s' }}
-            >
-              {data.subtitle}
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+              {HERO_CONTENT.subtitle}
             </p>
 
-            <div
-              className="flex flex-col sm:flex-row gap-4 items-start pt-2 animate-fade-in-up"
-              style={{ animationFillMode: 'both', animationDelay: '0.5s' }}
-            >
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center pt-2">
               <Button
                 size="lg"
-                className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all hover:scale-105"
+                className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/25 transition-all hover:scale-105 active:scale-95 font-semibold"
                 onClick={() => {
                   window.open(
                     'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa',
@@ -146,16 +58,17 @@ export function HeroSection() {
                   )
                 }}
               >
-                {data.primaryCta}
+                {HERO_CONTENT.primaryCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="h-14 px-8 text-lg w-full sm:w-auto border-slate-300 text-slate-700 hover:bg-slate-50 transition-all hover:scale-105 bg-white/50 backdrop-blur-sm"
+                onClick={scrollToDemo}
+                className="h-14 px-8 text-lg w-full sm:w-auto border-emerald-600/30 text-emerald-800 hover:text-emerald-900 hover:bg-emerald-50/70 hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 bg-white shadow-sm font-semibold"
               >
-                <Play className="mr-2 h-5 w-5" />
-                {data.secondaryCta}
+                <Play className="mr-2 h-5 w-5 fill-emerald-600 text-emerald-600" />
+                {HERO_CONTENT.secondaryCta}
               </Button>
             </div>
           </div>

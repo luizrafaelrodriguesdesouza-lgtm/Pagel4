@@ -25,86 +25,92 @@ export function DeliveryManagementSection() {
   return (
     <section
       id="gestao-entregas"
-      className="py-20 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white relative overflow-hidden"
+      className="py-24 bg-gradient-to-b from-white via-slate-50/70 to-emerald-50/30 text-slate-900 relative overflow-hidden border-t border-slate-100"
     >
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full pointer-events-none" />
+      {/* Subtle light background decorations */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-400/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20 px-4 py-1.5 text-sm rounded-full font-medium inline-flex items-center gap-2">
-            <Truck className="w-4 h-4 text-blue-400" /> Novidade L4 Automação
+          <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 px-4 py-1.5 text-sm rounded-full font-semibold inline-flex items-center gap-2 shadow-xs">
+            <Truck className="w-4 h-4 text-emerald-600" /> Novidade RL4 Automação
           </Badge>
 
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-blue-200">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             Gestão de Entregas e Rastreamento
           </h2>
 
-          <p className="text-slate-300 text-lg md:text-xl leading-relaxed">
+          <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
             Acompanhe entregas em tempo real. Distribua pedidos para motoboys e mantenha o cliente
             informado do início ao fim.
           </p>
         </div>
 
+        {/* 3 Value Proposition Cards - Light & Clean */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/60 p-6 rounded-2xl hover:border-blue-500/40 transition-all duration-300">
-            <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-4 border border-blue-500/20">
+          <div className="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group">
+            <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-4 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
               <Zap className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-2 text-white">Entregas Ultra-rápidas</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-2 text-slate-900">Entregas Ultra-rápidas</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
               Distribuição automática para o motoboy mais próximo assim que a receita ou medicamento
               sai da triagem.
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/60 p-6 rounded-2xl hover:border-purple-500/40 transition-all duration-300">
-            <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-4 border border-purple-500/20">
+          <div className="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group">
+            <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-4 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
               <UserCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-2 text-white">Visão Dupla: Gestor e Motoboy</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-2 text-slate-900">Visão Dupla: Gestor e Motoboy</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
               O gestor acompanha todo o fluxo do balcão à porta do cliente, e o entregador acessa
               uma tela focada e limpa.
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/60 p-6 rounded-2xl hover:border-emerald-500/40 transition-all duration-300">
-            <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-4 border border-emerald-500/20">
+          <div className="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group">
+            <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-4 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-2 text-white">Comunicação e Pagamento Seguro</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-2 text-slate-900">
+              Comunicação e Pagamento Seguro
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
               Detalhamento de pagamento (Pix, Cartão, Dinheiro) e contato via WhatsApp para
               confirmação do cliente instantânea.
             </p>
           </div>
         </div>
 
-        <div className="relative rounded-3xl border border-slate-700/80 bg-slate-900/90 shadow-2xl p-4 md:p-8 overflow-hidden backdrop-blur-xl">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 mb-6 border-b border-slate-800 gap-4">
+        {/* Interactive App Mockup - Sleek App Container */}
+        <div className="relative rounded-3xl border border-slate-200/90 bg-white shadow-xl shadow-slate-200/50 p-4 md:p-8 overflow-hidden">
+          {/* Header of Mockup */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 mb-6 border-b border-slate-100 gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+              <div className="w-11 h-11 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-md shadow-emerald-600/20">
                 <Truck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-white">
+                <h4 className="text-lg md:text-xl font-bold text-slate-900">
                   Quadro de Entregas (Demonstração Interativa)
                 </h4>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-500">
                   Sistema operacional em tempo real para drogarias e farmácias de manipulação
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 flex-wrap">
-              <div className="bg-slate-800 p-1 rounded-xl border border-slate-700 flex items-center text-xs font-semibold">
+              <div className="bg-slate-100 p-1 rounded-xl border border-slate-200 flex items-center text-xs font-semibold">
                 <button
                   onClick={() => setActiveRole('gestor')}
                   className={`px-3 py-1.5 rounded-lg transition-all ${
                     activeRole === 'gestor'
-                      ? 'bg-blue-600 text-white shadow'
-                      : 'text-slate-400 hover:text-white'
+                      ? 'bg-emerald-600 text-white shadow-sm'
+                      : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   Gestor
@@ -113,8 +119,8 @@ export function DeliveryManagementSection() {
                   onClick={() => setActiveRole('entregador')}
                   className={`px-3 py-1.5 rounded-lg transition-all ${
                     activeRole === 'entregador'
-                      ? 'bg-blue-600 text-white shadow'
-                      : 'text-slate-400 hover:text-white'
+                      ? 'bg-emerald-600 text-white shadow-sm'
+                      : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   Entregador
@@ -124,7 +130,7 @@ export function DeliveryManagementSection() {
               <select
                 value={activeDriver}
                 onChange={(e) => setActiveDriver(e.target.value)}
-                className="bg-slate-800 text-slate-200 text-xs rounded-xl border border-slate-700 px-3 py-2 outline-none focus:border-blue-500"
+                className="bg-white text-slate-700 text-xs rounded-xl border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 shadow-xs"
               >
                 <option value="Motoboy01">Motoboy01</option>
                 <option value="Motoboy02">Motoboy02</option>
@@ -133,7 +139,7 @@ export function DeliveryManagementSection() {
               <Link to="/entregas">
                 <Button
                   size="sm"
-                  className="bg-blue-600 hover:bg-blue-500 text-white gap-2 text-xs rounded-xl"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 text-xs rounded-xl shadow-xs"
                 >
                   Abrir Dashboard Completo <ArrowRight className="w-3.5 h-3.5" />
                 </Button>
@@ -141,23 +147,25 @@ export function DeliveryManagementSection() {
             </div>
           </div>
 
+          {/* Kanban Columns (Product preview with dark screen mockup feel inside the columns) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-slate-950/60 rounded-2xl p-4 border border-blue-500/20">
+            {/* Coluna 1: Entrega Pronta */}
+            <div className="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-sm text-white">
               <div className="flex items-center justify-between mb-3">
-                <span className="font-bold text-blue-400 text-sm flex items-center gap-2">
-                  <Clock className="w-4 h-4" /> Entrega Pronta
+                <span className="font-bold text-emerald-400 text-sm flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-emerald-400" /> Entrega Pronta
                 </span>
-                <Badge className="bg-blue-500/20 text-blue-300 border-none font-bold text-xs">
+                <Badge className="bg-emerald-500/20 text-emerald-300 border-none font-bold text-xs">
                   2
                 </Badge>
               </div>
 
               <div className="space-y-3">
-                <Card className="bg-slate-800/90 border-slate-700 text-white shadow-md">
+                <Card className="bg-slate-800/90 border-slate-700 text-white shadow-sm hover:border-slate-600 transition-colors">
                   <CardContent className="p-3.5 space-y-2">
                     <div className="font-bold text-sm text-slate-100">Carol</div>
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-extrabold text-blue-400">R$ 43,34</span>
+                      <span className="font-extrabold text-emerald-400">R$ 43,34</span>
                       <span className="inline-flex items-center gap-1 text-[11px] bg-slate-700/80 px-2 py-0.5 rounded text-slate-300">
                         <Banknote className="w-3 h-3 text-emerald-400" /> Dinheiro
                       </span>
@@ -169,13 +177,13 @@ export function DeliveryManagementSection() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-slate-800/90 border-slate-700 text-white shadow-md">
+                <Card className="bg-slate-800/90 border-slate-700 text-white shadow-sm hover:border-slate-600 transition-colors">
                   <CardContent className="p-3.5 space-y-2">
                     <div className="font-bold text-sm text-slate-100">Francisco</div>
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-extrabold text-blue-400">R$ 34,54</span>
+                      <span className="font-extrabold text-emerald-400">R$ 34,54</span>
                       <span className="inline-flex items-center gap-1 text-[11px] bg-slate-700/80 px-2 py-0.5 rounded text-slate-300">
-                        <CreditCard className="w-3 h-3 text-sky-400" /> Cartão de Crédito
+                        <CreditCard className="w-3 h-3 text-emerald-300" /> Cartão de Crédito
                       </span>
                     </div>
                     <p className="text-[11px] text-slate-400 flex items-center gap-1 truncate">
@@ -187,31 +195,32 @@ export function DeliveryManagementSection() {
               </div>
             </div>
 
-            <div className="bg-slate-950/60 rounded-2xl p-4 border border-purple-500/20">
+            {/* Coluna 2: Atribuído */}
+            <div className="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-sm text-white">
               <div className="flex items-center justify-between mb-3">
-                <span className="font-bold text-purple-400 text-sm flex items-center gap-2">
-                  <UserCheck className="w-4 h-4" /> {activeDriver}
+                <span className="font-bold text-emerald-400 text-sm flex items-center gap-2">
+                  <UserCheck className="w-4 h-4 text-emerald-400" /> {activeDriver}
                 </span>
-                <Badge className="bg-purple-500/20 text-purple-300 border-none font-bold text-xs">
+                <Badge className="bg-emerald-500/20 text-emerald-300 border-none font-bold text-xs">
                   1
                 </Badge>
               </div>
 
               <div className="space-y-3">
-                <Card className="bg-slate-800/90 border-purple-500/30 text-white shadow-md ring-1 ring-purple-500/20">
+                <Card className="bg-slate-800/90 border-emerald-500/40 text-white shadow-sm ring-1 ring-emerald-500/20">
                   <CardContent className="p-3.5 space-y-2">
                     <div className="font-bold text-sm text-slate-100">Camila Rocha</div>
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-extrabold text-purple-300">R$ 72,50</span>
-                      <span className="inline-flex items-center gap-1 text-[11px] bg-purple-950/60 text-purple-300 px-2 py-0.5 rounded border border-purple-800/50">
-                        <QrCode className="w-3 h-3 text-purple-400" /> Pix
+                      <span className="font-extrabold text-emerald-300">R$ 72,50</span>
+                      <span className="inline-flex items-center gap-1 text-[11px] bg-emerald-950/60 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800/50">
+                        <QrCode className="w-3 h-3 text-emerald-400" /> Pix
                       </span>
                     </div>
                     <p className="text-[11px] text-slate-400 flex items-center gap-1 truncate">
                       <MapPin className="w-3 h-3 text-slate-500 shrink-0" /> Rua Estados Unidos,
                       1500...
                     </p>
-                    <div className="pt-1 flex items-center gap-1.5 text-[10px] text-purple-300 bg-purple-500/10 px-2 py-1 rounded-md">
+                    <div className="pt-1 flex items-center gap-1.5 text-[10px] text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded-md">
                       <span>👤 Atribuído a {activeDriver}</span>
                     </div>
                   </CardContent>
@@ -219,7 +228,8 @@ export function DeliveryManagementSection() {
               </div>
             </div>
 
-            <div className="bg-slate-950/60 rounded-2xl p-4 border border-amber-500/20">
+            {/* Coluna 3: Em Andamento */}
+            <div className="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-sm text-white">
               <div className="flex items-center justify-between mb-3">
                 <span className="font-bold text-amber-400 text-sm flex items-center gap-2">
                   <Truck className="w-4 h-4" /> Em Andamento
@@ -234,10 +244,11 @@ export function DeliveryManagementSection() {
               </div>
             </div>
 
-            <div className="bg-slate-950/60 rounded-2xl p-4 border border-emerald-500/20">
+            {/* Coluna 4: Concluída */}
+            <div className="bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-sm text-white">
               <div className="flex items-center justify-between mb-3">
                 <span className="font-bold text-emerald-400 text-sm flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4" /> Concluída
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Concluída
                 </span>
                 <Badge className="bg-emerald-500/20 text-emerald-300 border-none font-bold text-xs">
                   1
@@ -245,13 +256,13 @@ export function DeliveryManagementSection() {
               </div>
 
               <div className="space-y-3">
-                <Card className="bg-slate-800/90 border-slate-700 text-white shadow-md opacity-90">
+                <Card className="bg-slate-800/90 border-slate-700 text-white shadow-sm opacity-90">
                   <CardContent className="p-3.5 space-y-2">
                     <div className="font-bold text-sm text-slate-100">Luiz Rafael</div>
                     <div className="flex items-center justify-between text-xs">
                       <span className="font-extrabold text-emerald-400">R$ 98,95</span>
                       <span className="inline-flex items-center gap-1 text-[11px] bg-slate-700/80 px-2 py-0.5 rounded text-slate-300">
-                        <CreditCard className="w-3 h-3 text-sky-400" /> Cartão 2x
+                        <CreditCard className="w-3 h-3 text-emerald-300" /> Cartão 2x
                       </span>
                     </div>
                     <p className="text-[11px] text-slate-400 flex items-center gap-1 truncate">
@@ -271,7 +282,7 @@ export function DeliveryManagementSection() {
             <Link to="/entregas">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-6 rounded-2xl shadow-xl shadow-blue-600/30 text-base gap-3"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-6 rounded-2xl shadow-lg shadow-emerald-600/25 text-base gap-3 hover:scale-105 active:scale-95 transition-all"
               >
                 Acessar o Painel de Gestão de Entregas em Tempo Real
                 <ArrowRight className="w-5 h-5" />

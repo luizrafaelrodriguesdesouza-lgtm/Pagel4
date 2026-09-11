@@ -1,9 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Skeleton } from '@/components/ui/skeleton'
+import { HeroSection } from '@/components/sections/HeroSection'
 
-const HeroSection = lazy(() =>
-  import('@/components/sections/HeroSection').then((m) => ({ default: m.HeroSection })),
-)
 const BenefitsSection = lazy(() =>
   import('@/components/sections/BenefitsSection').then((m) => ({ default: m.BenefitsSection })),
 )
@@ -59,9 +57,7 @@ const SectionLoader = () => (
 const Index = () => {
   return (
     <div className="flex flex-col w-full">
-      <Suspense fallback={<SectionLoader />}>
-        <HeroSection />
-      </Suspense>
+      <HeroSection />
       <Suspense fallback={<SectionLoader />}>
         <ProblemSection />
       </Suspense>
