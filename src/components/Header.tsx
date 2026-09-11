@@ -1,108 +1,122 @@
 import { useState } from 'react'
-import { Menu, Instagram } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
-import logoUrl from '@/assets/editedimage1780319473364-fd281.png'
+import { Truck, Menu, X, ArrowRight, Zap, Settings } from 'lucide-react'
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
-  const links = [
-    { href: '#problemas', label: 'Problemas' },
-    { href: '#seguranca', label: 'Segurança' },
-    { href: '#solucao', label: 'Solução' },
-    { href: '#comparativo', label: 'Comparativo' },
-    { href: '#api-oficial', label: 'API Oficial' },
-    { href: '#faq', label: 'FAQ' },
-  ]
-
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault()
-    const href = e.currentTarget.getAttribute('href')
-    if (href) {
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-      setIsOpen(false)
-    }
-  }
-
-  const formLink = 'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa'
+  const isDeliveriesPage = location.pathname === '/entregas'
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-glass backdrop-blur-md border-b border-border/40">
-      <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-6 md:px-12 lg:px-16">
-        <a href="#" className="flex items-center gap-2 pr-12">
-          <img
-            src={logoUrl}
-            alt="Raphael L4 Integrações"
-            className="h-8 md:h-10 w-auto object-contain"
-          />
-        </a>
+    <header className="sticky top-0 z-40 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-400 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+            <Zap className="w-5 h-5 fill-current" />
+          </div>
+          <div>
+            <span className="font-extrabold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-blue-200">
+              RL4 Automação
+            </span>
+            <span className="text-[10px] block text-blue-400 font-semibold -mt-1 tracking-wider uppercase">
+              IA & Logística
+            </span>
+          </div>
+        </Link>
 
-        <nav className="hidden md:flex flex-1 items-center justify-end gap-6 lg:gap-8">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={handleScroll}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="https://www.instagram.com/raphael_l4_integracoes/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <Instagram className="h-5 w-5" />
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="#problema" className="hover:text-white transition-colors">
+            Dores
           </a>
-          <Button className="glow-hover" onClick={() => window.open(formLink, '_blank')}>
-            Solicitar Orçamento Rápido
-          </Button>
+          <a href="#solucao" className="hover:text-white transition-colors">
+            Solução
+          </a>
+          <a href="#beneficios" className="hover:text-white transition-colors">
+            Benefícios
+          </a>
+          <a
+            href="#gestao-entregas"
+            className="hover:text-white transition-colors flex items-center gap-1.5 text-blue-400 font-semibold"
+          >
+            <Truck className="w-4 h-4" /> Gestão de Entregas
+          </a>
+          <a href="#faq" className="hover:text-white transition-colors">
+            FAQ
+          </a>
+          <Link
+            to="/config"
+            className="hover:text-white transition-colors flex items-center gap-1.5 text-slate-400"
+          >
+            <Settings className="w-4 h-4" /> Config
+          </Link>
         </nav>
 
-        <div className="md:hidden">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Abrir menu</span>
+        <div className="hidden md:flex items-center gap-3">
+          {!isDeliveriesPage && (
+            <Link to="/entregas">
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-blue-500/40 text-blue-300 hover:bg-blue-500/10 font-semibold gap-2 text-xs rounded-xl"
+              >
+                <Truck className="w-3.5 h-3.5 text-blue-400" />
+                Painel Kanban
               </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="text-left mb-6">Menu</SheetTitle>
-              <nav className="flex flex-col gap-4">
-                {links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={handleScroll}
-                    className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <a
-                  href="https://www.instagram.com/raphael_l4_integracoes/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 text-lg font-medium text-foreground hover:text-primary transition-colors mt-2"
-                >
-                  <Instagram className="h-5 w-5" />
-                  Instagram
-                </a>
-                <Button
-                  className="w-full mt-4 glow-hover"
-                  onClick={() => window.open(formLink, '_blank')}
-                >
-                  Solicitar Orçamento Rápido
-                </Button>
-              </nav>
-            </SheetContent>
-          </Sheet>
+            </Link>
+          )}
+
+          <a href="#formulario">
+            <Button
+              size="sm"
+              className="bg-blue-600 hover:bg-blue-500 text-white font-bold gap-1.5 text-xs rounded-xl shadow-lg shadow-blue-600/20"
+            >
+              Orçamento Grátis
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Button>
+          </a>
         </div>
+
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 text-slate-400 hover:text-white"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3">
+          <a
+            href="#gestao-entregas"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2 text-blue-400 font-semibold py-2"
+          >
+            <Truck className="w-4 h-4" /> Gestão de Entregas e Motoboys
+          </a>
+          <Link
+            to="/entregas"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center justify-between text-slate-200 py-2 border-t border-slate-800"
+          >
+            <span>Ver Dashboard Kanban</span>
+            <ArrowRight className="w-4 h-4 text-blue-400" />
+          </Link>
+          <Link
+            to="/config"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2 text-slate-300 py-2 border-t border-slate-800"
+          >
+            <Settings className="w-4 h-4 text-slate-400" /> Configurações
+          </Link>
+          <a href="#formulario" onClick={() => setMobileMenuOpen(false)} className="block pt-2">
+            <Button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold">
+              Solicitar Orçamento
+            </Button>
+          </a>
+        </div>
+      )}
     </header>
   )
 }

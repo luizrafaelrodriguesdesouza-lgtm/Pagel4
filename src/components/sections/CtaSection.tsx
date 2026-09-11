@@ -32,13 +32,11 @@ export function CtaSection() {
           <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/800/400?q=noise&color=black')] opacity-20 mix-blend-overlay pointer-events-none" />
 
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-            Pronto para{' '}
-            <span className="text-primary">profissionalizar o lucro da sua farmácia?</span>
+            Pronto para <span className="text-primary">vender mais com automação?</span>
           </h2>
 
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Dê o primeiro passo para elevar a maturidade operacional da sua farmácia. Solicite um
-            orçamento com nossos especialistas e revolucione o seu atendimento.
+            Solicite um orçamento e descubra como automatizar o atendimento da sua farmácia.
           </p>
 
           <Button
@@ -48,7 +46,7 @@ export function CtaSection() {
             disabled={isLoading}
           >
             {isLoading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null}
-            Quero meu Orçamento de Automação
+            Solicitar Orçamento
             {!isLoading && (
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             )}

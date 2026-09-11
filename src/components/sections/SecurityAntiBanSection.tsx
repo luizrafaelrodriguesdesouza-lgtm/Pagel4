@@ -22,35 +22,34 @@ export function SecurityAntiBanSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative rounded-3xl overflow-hidden border border-emerald-500/20 glow-hover aspect-[4/5] max-w-md mx-auto w-full group shadow-[0_0_40px_rgba(16,185,129,0.1)]">
             <img
-              src="https://img.usecurling.com/p/800/1000?q=hacked%20smartphone%20cyber%20security&color=green&dpr=2"
+              src="https://img.usecurling.com/p/800/1000?q=secure%20phone%20whatsapp&color=green&dpr=2"
               alt="Security Warning Smartphone"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 bg-zinc-900/80 border border-red-500/30 backdrop-blur-md p-4 rounded-xl flex items-start gap-3 shadow-lg">
-              <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
+            <div className="absolute bottom-6 left-6 right-6 bg-zinc-900/80 border border-emerald-500/30 backdrop-blur-md p-4 rounded-xl flex items-start gap-3 shadow-lg">
+              <ShieldCheck className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" />
               <p className="text-sm font-medium text-slate-200">
-                <span className="text-red-400 font-bold block mb-1">ALERTA DE RISCO:</span>
-                Ferramentas não oficiais e automações "cinzas" levam ao bloqueio permanente pela
-                META.
+                <span className="text-emerald-400 font-bold block mb-1">PROTEÇÃO ATIVA:</span>
+                Apenas automações com a API Oficial da Meta garantem segurança total.
               </p>
             </div>
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full bg-red-500/10 text-red-400 mb-6 border border-red-500/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full bg-emerald-500/10 text-emerald-400 mb-6 border border-emerald-500/20">
               <ShieldCheck className="w-4 h-4" />
-              Segurança e Anti-Ban
+              Segurança e Conformidade
             </div>
 
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-white">
-              Proteja seu maior ativo: <br className="hidden md:block" />O fim do medo de{' '}
-              <span className="text-red-400">banimentos no WhatsApp.</span>
+              Segurança total com a <br className="hidden md:block" />
+              <span className="text-emerald-400">API Oficial da Meta.</span>
             </h2>
 
             <p className="text-muted-foreground text-lg mb-8 font-medium">
-              Não corra o risco de perder seu número. Ferramentas não oficiais e automações 'cinzas'
-              levam ao bloqueio permanente pela META. Conecte-se com a segurança da API Oficial.
+              Opere sem riscos de banimento. A API Oficial da Meta garante estabilidade e
+              conformidade total para sua operação.
             </p>
 
             <div className="space-y-6 mb-10">
@@ -59,10 +58,12 @@ export function SecurityAntiBanSection() {
                   <AlertTriangle className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">O Custo do Bloqueio</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    O Risco de Ferramentas Não Oficiais
+                  </h3>
                   <p className="text-muted-foreground">
-                    Perder seu número significa perder todo o histórico, lista de contatos e
-                    confiança dos clientes. Um prejuízo incalculável para o seu negócio.
+                    Ferramentas não autorizadas podem bloquear seu número permanentemente, perdendo
+                    todo o histórico e contatos.
                   </p>
                 </div>
               </div>
@@ -76,8 +77,8 @@ export function SecurityAntiBanSection() {
                     Blindagem com a API Oficial
                   </h3>
                   <p className="text-muted-foreground">
-                    Operamos 100% dentro das regras da Meta. Sua operação ganha estabilidade, sem
-                    quedas e sem riscos de punições ou desconexões por QR Code.
+                    Operamos dentro das regras da Meta: estabilidade total, sem quedas e sem riscos
+                    de banimento.
                   </p>
                 </div>
               </div>
@@ -93,7 +94,7 @@ export function SecurityAntiBanSection() {
                 )
               }
             >
-              Garantir Segurança e Solicitar Orçamento
+              Garantir Segurança e Orçamento
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

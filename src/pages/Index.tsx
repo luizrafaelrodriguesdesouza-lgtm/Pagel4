@@ -36,6 +36,11 @@ const FaqSection = lazy(() =>
 const CtaSection = lazy(() =>
   import('@/components/sections/CtaSection').then((m) => ({ default: m.CtaSection })),
 )
+const DeliveryManagementSection = lazy(() =>
+  import('@/components/sections/DeliveryManagementSection').then((m) => ({
+    default: m.DeliveryManagementSection,
+  })),
+)
 const TestimonialSection = lazy(() =>
   import('@/components/sections/TestimonialSection').then((m) => ({
     default: m.TestimonialSection,
@@ -62,6 +67,9 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <SecurityAntiBanSection />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <DeliveryManagementSection />
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <BenefitsSection />

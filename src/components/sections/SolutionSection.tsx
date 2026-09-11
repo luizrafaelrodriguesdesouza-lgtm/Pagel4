@@ -18,11 +18,11 @@ export function SolutionSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">
-              A Orquestração <span className="text-primary">Perfeita</span>
+              Tudo automatizado, <span className="text-primary">nada perdido</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-10">
-              Unimos o poder de automação do n8n com a inteligência artificial para criar fluxos que
-              atendem, qualificam e gerenciam seus clientes em tempo real.
+              Atendimento inteligente que qualifica pedidos, responde dúvidas e organiza entregas —
+              automaticamente, 24 horas por dia.
             </p>
 
             <div className="space-y-8">
@@ -33,7 +33,7 @@ export function SolutionSection() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Atendimento Instantâneo</h3>
                   <p className="text-muted-foreground">
-                    Respostas imediatas no WhatsApp e Instagram 24 horas por dia, 7 dias por semana.
+                    Respostas imediatas no WhatsApp, 24 horas por dia, 7 dias por semana.
                   </p>
                 </div>
               </div>
@@ -45,8 +45,7 @@ export function SolutionSection() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Qualificação Automática</h3>
                   <p className="text-muted-foreground">
-                    Agentes de IA conversam, entendem a necessidade e classificam a temperatura do
-                    lead de forma padronizada.
+                    A IA entende a necessidade do cliente e classifica o lead automaticamente.
                   </p>
                 </div>
               </div>
@@ -56,10 +55,9 @@ export function SolutionSection() {
                   <Blocks className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">CRM Atualizado</h3>
+                  <h3 className="text-xl font-semibold mb-2">Integração Total</h3>
                   <p className="text-muted-foreground">
-                    Dados sincronizados automaticamente com seu CRM, planilhas e sistemas internos
-                    sem intervenção humana.
+                    Dados sincronizados com seu CRM e planilhas, sem intervenção humana.
                   </p>
                 </div>
               </div>

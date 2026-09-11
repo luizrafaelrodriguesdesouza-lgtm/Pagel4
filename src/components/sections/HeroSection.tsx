@@ -21,12 +21,11 @@ export function HeroSection() {
     const timer = setTimeout(() => {
       try {
         const fetchedData = {
-          title:
-            'Pare de perder vendas na sua Farmácia por demora no WhatsApp: Atendimento Instantâneo com IA e API Oficial.',
+          title: 'Automatize o WhatsApp da sua farmácia e venda mais.',
           subtitle:
-            'Transformamos o WhatsApp da sua farmácia em uma máquina de vendas que qualifica pedidos, tira dúvidas e organiza entregas 24/7, com a segurança da infraestrutura oficial da Meta.',
-          primaryCta: 'Solicitar Orçamento Rápido',
-          secondaryCta: 'Ver Demo',
+            'Atendimento instantâneo 24/7, gestão de entregas em tempo real e a segurança da API oficial da Meta.',
+          primaryCta: 'Solicitar Orçamento',
+          secondaryCta: 'Ver Demonstração',
         }
 
         if (!fetchedData.title) {

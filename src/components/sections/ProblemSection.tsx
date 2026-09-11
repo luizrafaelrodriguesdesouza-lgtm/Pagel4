@@ -8,18 +8,18 @@ export function ProblemSection() {
   const problems = [
     {
       icon: Droplets,
-      title: 'Vendas Perdidas',
-      description: 'O cliente compra na farmácia que responder primeiro.',
+      title: 'Resposta Lenta',
+      description: 'Quem responde primeiro, vende. Atraso no WhatsApp é venda perdida.',
     },
     {
       icon: Clock,
-      title: 'Balconistas Sobrecarregados',
-      description: 'A IA filtra dúvidas básicas, horários e disponibilidade de medicamentos.',
+      title: 'Equipe Sobrecarregada',
+      description: 'Balconistas divididos entre atendimento presencial e mensagens.',
     },
     {
       icon: Unlink,
-      title: 'Caos Operacional',
-      description: 'Pedidos e dados de clientes perdidos sem integração com CRM.',
+      title: 'Pedidos Perdidos',
+      description: 'Sem organização, pedidos se perdem e clientes ficam sem entrega.',
     },
   ]
 
@@ -33,11 +33,10 @@ export function ProblemSection() {
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-            O custo invisível da sua <span className="text-destructive">demora</span>
+            Cada minuto de atraso <span className="text-destructive">custa vendas</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Processos não otimizados não apenas frustram sua equipe, mas corroem ativamente sua
-            margem de lucro todos os dias.
+            Quando o atendimento demora, o cliente vai para a concorrência.
           </p>
         </div>
 
