@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
-import { useEffect } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { createLead } from '@/services/leads'
-import { useDebounce } from '@/hooks/use-debounce'
 import { useToast } from '@/hooks/use-toast'
 import {
   Form,
@@ -49,8 +47,8 @@ export function FormularioLead() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    mode: 'onSubmit',
-    reValidateMode: 'onSubmit',
+    mode: 'onTouched',
+    reValidateMode: 'onChange',
     defaultValues: {
       name: '',
       email: '',
@@ -59,15 +57,6 @@ export function FormularioLead() {
       message: '',
     },
   })
-
-  const watchedValues = form.watch()
-  const debouncedValues = useDebounce(watchedValues, 300)
-
-  useEffect(() => {
-    if (form.formState.isDirty) {
-      form.trigger()
-    }
-  }, [debouncedValues, form])
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -79,11 +68,19 @@ export function FormularioLead() {
         message: values.message,
       })
       setIsSuccess(true)
-    } catch (error) {
+      toast({
+        title: 'Solicitação enviada com sucesso!',
+        description: 'Nossa equipe entrará em contato em breve para apresentar o diagnóstico.',
+      })
+    } catch (error: any) {
+      const errMsg =
+        error?.data?.message ||
+        error?.message ||
+        'Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.'
       toast({
         variant: 'destructive',
         title: 'Falha no envio',
-        description: 'Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.',
+        description: errMsg,
       })
     }
   }

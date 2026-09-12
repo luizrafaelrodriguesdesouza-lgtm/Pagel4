@@ -22,47 +22,47 @@ export function PainSection({ onOpenAudit }: PainSectionProps) {
   const pains = [
     {
       icon: Clock,
-      title: 'Tempo de espera custa vendas',
+      title: 'Demora gera perda de receita',
       description:
-        'Quem responde primeiro, fecha. Enquanto seu cliente aguarda uma resposta manual no WhatsApp, ele busca a farmácia ao lado.',
-      highlight: 'A cada minuto sem resposta, 40% das conversões esfriam.',
+        'No WhatsApp, quem responde primeiro fecha. O cliente que espera 10 minutos já comprou na concorrência.',
+      highlight: 'Respostas rápidas multiplicam o fechamento de pedidos.',
     },
     {
       icon: UserX,
-      title: 'Balconista dividido e sobrecarregado',
+      title: 'Equipe sobrecarregada no balcão',
       description:
-        'Sua equipe precisa atender quem está no balcão físico e responder mensagens ao mesmo tempo, gerando estresse e atendimento truncado.',
-      highlight: 'A IA assume o filtro inicial e entrega o lead pronto para fechar.',
+        'Atender cliente na fila física e digitar mensagens ao mesmo tempo gera estresse e erros nos pedidos.',
+      highlight: 'A IA faz a triagem inicial e entrega a receita mastigada.',
     },
     {
       icon: PackageX,
-      title: 'Pedidos esquecidos na troca de turno',
+      title: 'Pedidos perdidos na troca de turno',
       description:
-        'Sem processo unificado, mensagens ficam lidas sem resposta, motoboys saem sem rota clara e o cliente fica sem previsão da entrega.',
-      highlight: 'Organização visual do balcão até a entrega final.',
+        'Mensagens esquecidas como não lidas e falta de rastreio de motoboys deixam o cliente ansioso ligando para a loja.',
+      highlight: 'Organização visual da saída até a porta do cliente.',
     },
   ]
 
   const comparisons = [
     {
-      label: 'Tempo para primeira resposta',
-      manual: '10 a 25 minutos em horário de pico',
-      rl4: 'Até 30 segundos, 24 horas por dia',
+      label: 'Primeira resposta ao cliente',
+      manual: '10 a 25 minutos no pico',
+      rl4: 'Até 30 segundos, 24h por dia',
     },
     {
-      label: 'Qualificação do pedido e receita',
-      manual: 'Balconista digita dados um a um',
-      rl4: 'IA coleta endereço, itens e forma de pagamento',
+      label: 'Triagem de receita e endereço',
+      manual: 'Balconista digita tudo do zero',
+      rl4: 'IA organiza endereço, itens e pagamento',
     },
     {
-      label: 'Segurança contra banimento de WhatsApp',
-      manual: 'Risco alto com robôs piratas ou QR code',
-      rl4: '100% blindado com API Oficial da Meta',
+      label: 'Risco de banimento no WhatsApp',
+      manual: 'Alto com robôs de QR Code',
+      rl4: '100% seguro na API Oficial da Meta',
     },
     {
-      label: 'Rastreio para o cliente no sofá',
-      manual: 'Cliente pergunta "cadê meu remédio?" sem resposta',
-      rl4: 'Notificação automática quando o motoboy sai',
+      label: 'Avisos da entrega em domicílio',
+      manual: 'Cliente liga perguntando da rota',
+      rl4: 'Aviso automático quando o motoboy sai',
     },
   ]
 

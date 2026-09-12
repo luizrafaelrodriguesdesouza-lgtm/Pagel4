@@ -54,6 +54,9 @@ export function Header({ onOpenAudit }: HeaderProps = {}) {
           <a href="#prova-social" className="hover:text-emerald-600 transition-colors">
             Resultados
           </a>
+          <a href="#portfolio" className="hover:text-emerald-600 transition-colors">
+            Portfólio
+          </a>
           <a href="#faq" className="hover:text-emerald-600 transition-colors">
             FAQ
           </a>
@@ -120,6 +123,13 @@ export function Header({ onOpenAudit }: HeaderProps = {}) {
             className="block text-slate-700 py-2 border-t border-slate-100"
           >
             Resultados & Prova Social
+          </a>
+          <a
+            href="#portfolio"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-slate-700 py-2 border-t border-slate-100"
+          >
+            Portfólio de Soluções
           </a>
           <a
             href="#faq"

@@ -3,14 +3,15 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { AuditModal } from '@/components/AuditModal'
 
-// Consolidado em 6 seções essenciais na Home:
-// 1. Hero (instantânea, preservada da etapa 1)
-// 2. Dor: "O custo invisível da sua demora" (fundindo problema, comparação e API oficial Meta)
-// 3. Solução / Benefícios: "Atendimento Humano, Velocidade de IA, Segurança de API"
-// 4. Gestão de Entregas / App (#gestao-entregas) com jornada do cliente no sofá
-// 5. Prova Social realista (caso Sorocaba 15m -> 30s, métricas sóbrias, depoimentos, logos de parceiros)
-// 6. FAQ focado em dúvidas de segurança e implantação
-// 7. CTA Final: "Pronto para profissionalizar seu lucro?" apontando para a auditoria de maturidade
+// Estrutura consolidada em 8 seções bem espaçadas e limpas (sem repetição):
+// 1. Hero Instantânea com imagem de apoio e CTAs diretos
+// 2. Dores da Operação & Comparativo direto (sem rodeios)
+// 3. Solução Unificada: Atendimento Humano + IA + API Oficial Meta
+// 4. Gestão de Entregas & Rastreamento em tempo real (#gestao-entregas)
+// 5. Resultados Concretos & Prova Social (Caso Sorocaba + Métricas sóbrias)
+// 6. Portfólio "Soluções que já entregamos" (CRM saúde, Agenda+, Advocacia, Cardápio, Vendas, Kanban)
+// 7. FAQ com respostas diretas e desmistificação
+// 8. CTA Final focado na Auditoria Gratuita de Maturidade Operacional
 
 const PainSection = lazy(() =>
   import('@/components/sections/PainSection').then((m) => ({ default: m.PainSection })),
@@ -28,6 +29,11 @@ const DeliveryManagementSection = lazy(() =>
 const SocialProofSection = lazy(() =>
   import('@/components/sections/SocialProofSection').then((m) => ({
     default: m.SocialProofSection,
+  })),
+)
+const PortfolioSection = lazy(() =>
+  import('@/components/sections/PortfolioSection').then((m) => ({
+    default: m.PortfolioSection,
   })),
 )
 const FaqSection = lazy(() =>
@@ -75,12 +81,17 @@ const Index = () => {
         <SocialProofSection onOpenAudit={handleOpenAudit} />
       </Suspense>
 
-      {/* 6. FAQ Curto: Segurança, anti-ban, equipe e prazos */}
+      {/* 6. Portfólio: Soluções que já entregamos (Amplitude de atuação) */}
+      <Suspense fallback={<SectionLoader />}>
+        <PortfolioSection onOpenAudit={handleOpenAudit} />
+      </Suspense>
+
+      {/* 7. FAQ Curto: Segurança, anti-ban, equipe e prazos */}
       <Suspense fallback={<SectionLoader />}>
         <FaqSection onOpenAudit={handleOpenAudit} />
       </Suspense>
 
-      {/* 7. CTA Final: "Pronto para profissionalizar seu lucro?" */}
+      {/* 8. CTA Final: "Pronto para profissionalizar seu lucro?" */}
       <Suspense fallback={<SectionLoader />}>
         <CtaSection onOpenAudit={handleOpenAudit} />
       </Suspense>

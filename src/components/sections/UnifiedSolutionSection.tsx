@@ -23,38 +23,38 @@ export function UnifiedSolutionSection({ onOpenAudit }: UnifiedSolutionSectionPr
   const pillars = [
     {
       icon: MessageSquare,
-      title: 'Atendimento Humano',
-      badge: 'Calor & Cuidado',
+      title: 'Atendimento Natural',
+      badge: 'Acolhimento',
       description:
-        'A IA faz o filtro e a qualificação inicial com linguagem natural brasileira, e transfere suavemente para o balconista fechar o pedido ou validar a receita.',
+        'A IA faz a primeira triagem com tom empático brasileiro e transfere para o balconista quando chega a hora de conferir a receita ou fechar o pedido.',
       items: [
-        'Respostas sem cara de "robô travado"',
-        'Encaminhamento inteligente para o balconista certo',
-        'Histórico do cliente preservado na conversa',
+        'Conversa fluida, sem respostas engessadas',
+        'Transição limpa para atendente humano',
+        'Histórico do cliente sempre preservado',
       ],
     },
     {
       icon: Bot,
-      title: 'Velocidade de IA',
-      badge: 'Resposta em 30s',
+      title: 'Velocidade 24/7',
+      badge: 'Em até 30s',
       description:
-        'Disponível 24 horas por dia, 7 dias por semana. Nenhum cliente fica no vácuo esperando preço de fralda, dipirona ou horário de funcionamento.',
+        'Atendimento sem filas a qualquer hora. Nenhum cliente espera minutos para saber se a loja tem um produto, taxa de entrega ou forma de pagamento.',
       items: [
-        'Triagem instantânea de receitas e pedidos',
-        'Consulta rápida a bairros atendidos e taxas',
-        'Captação de leads mesmo fora do horário comercial',
+        'Triagem rápida de receitas e orçamentos',
+        'Confirmação de bairros atendidos e taxas',
+        'Vendas captadas mesmo com a loja fechada',
       ],
     },
     {
       icon: ShieldCheck,
-      title: 'Segurança de API',
-      badge: 'Meta Oficial',
+      title: 'API Oficial da Meta',
+      badge: 'Blindagem Total',
       description:
-        'Infraestrutura homologada pelo WhatsApp Business Cloud. Sem instabilidade de conexão, sem quedas repentinas e com blindagem total do seu número comercial.',
+        'Conexão direta pela Meta WhatsApp Cloud API. Sem depender de celular ligado na tomada e com zero risco de bloqueio do seu número de telefone.',
       items: [
-        'Conexão direta com os servidores da Meta',
-        'Criptografia e conformidade com privacidade',
-        'Sem necessidade de celular dedicado ligado 24h',
+        'Infraestrutura oficial e homologada',
+        'Estabilidade sem quedas diárias de conexão',
+        'Proteção jurídica e de dados da empresa',
       ],
     },
   ]
