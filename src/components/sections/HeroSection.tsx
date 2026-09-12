@@ -11,11 +11,26 @@ const HERO_CONTENT = {
   secondaryCta: 'Ver Demonstração',
 }
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onOpenAudit?: () => void
+}
+
+export function HeroSection({ onOpenAudit }: HeroSectionProps = {}) {
   const scrollToDemo = () => {
     const section = document.getElementById('gestao-entregas')
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const handlePrimaryCta = () => {
+    if (onOpenAudit) {
+      onOpenAudit()
+    } else {
+      window.open(
+        'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa',
+        '_blank',
+      )
     }
   }
 
@@ -50,13 +65,8 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center pt-2">
               <Button
                 size="lg"
-                className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/25 transition-all hover:scale-105 active:scale-95 font-semibold"
-                onClick={() => {
-                  window.open(
-                    'https://n8n-n8n.sd3ni9.easypanel.host/form/93cbdace-782c-4b58-8d35-6e77ebc589fa',
-                    '_blank',
-                  )
-                }}
+                className="h-14 px-8 text-lg w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/25 transition-all hover:scale-105 active:scale-95 font-semibold rounded-2xl"
+                onClick={handlePrimaryCta}
               >
                 {HERO_CONTENT.primaryCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -65,7 +75,7 @@ export function HeroSection() {
                 size="lg"
                 variant="outline"
                 onClick={scrollToDemo}
-                className="h-14 px-8 text-lg w-full sm:w-auto border-emerald-600/30 text-emerald-800 hover:text-emerald-900 hover:bg-emerald-50/70 hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 bg-white shadow-sm font-semibold"
+                className="h-14 px-8 text-lg w-full sm:w-auto border-emerald-600/30 text-emerald-800 hover:text-emerald-900 hover:bg-emerald-50/70 hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 bg-white shadow-sm font-semibold rounded-2xl"
               >
                 <Play className="mr-2 h-5 w-5 fill-emerald-600 text-emerald-600" />
                 {HERO_CONTENT.secondaryCta}

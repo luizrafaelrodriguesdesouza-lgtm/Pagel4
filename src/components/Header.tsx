@@ -3,11 +3,23 @@ import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Truck, Menu, X, ArrowRight, Zap, Settings } from 'lucide-react'
 
-export function Header() {
+interface HeaderProps {
+  onOpenAudit?: () => void
+}
+
+export function Header({ onOpenAudit }: HeaderProps = {}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
 
   const isDeliveriesPage = location.pathname === '/entregas'
+
+  const handleCtaClick = (e: React.MouseEvent) => {
+    if (onOpenAudit) {
+      e.preventDefault()
+      onOpenAudit()
+      setMobileMenuOpen(false)
+    }
+  }
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 text-slate-900 shadow-sm">
@@ -33,14 +45,14 @@ export function Header() {
           <a href="#solucao" className="hover:text-emerald-600 transition-colors">
             Solução
           </a>
-          <a href="#beneficios" className="hover:text-emerald-600 transition-colors">
-            Benefícios
-          </a>
           <a
             href="#gestao-entregas"
             className="hover:text-emerald-600 transition-colors flex items-center gap-1.5 text-emerald-700 font-semibold"
           >
             <Truck className="w-4 h-4 text-emerald-600" /> Gestão de Entregas
+          </a>
+          <a href="#prova-social" className="hover:text-emerald-600 transition-colors">
+            Resultados
           </a>
           <a href="#faq" className="hover:text-emerald-600 transition-colors">
             FAQ
@@ -67,15 +79,14 @@ export function Header() {
             </Link>
           )}
 
-          <a href="#formulario">
-            <Button
-              size="sm"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold gap-1.5 text-xs rounded-xl shadow-md shadow-emerald-600/20"
-            >
-              Orçamento Grátis
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Button>
-          </a>
+          <Button
+            size="sm"
+            onClick={handleCtaClick}
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold gap-1.5 text-xs rounded-xl shadow-md shadow-emerald-600/20"
+          >
+            Auditoria Gratuita
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Button>
         </div>
 
         <button
@@ -103,6 +114,20 @@ export function Header() {
             <span>Ver Dashboard Kanban</span>
             <ArrowRight className="w-4 h-4 text-emerald-600" />
           </Link>
+          <a
+            href="#prova-social"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-slate-700 py-2 border-t border-slate-100"
+          >
+            Resultados & Prova Social
+          </a>
+          <a
+            href="#faq"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-slate-700 py-2 border-t border-slate-100"
+          >
+            Dúvidas Frequentes
+          </a>
           <Link
             to="/config"
             onClick={() => setMobileMenuOpen(false)}
@@ -110,11 +135,14 @@ export function Header() {
           >
             <Settings className="w-4 h-4 text-slate-500" /> Configurações
           </Link>
-          <a href="#formulario" onClick={() => setMobileMenuOpen(false)} className="block pt-2">
-            <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold">
-              Solicitar Orçamento
+          <div className="pt-2">
+            <Button
+              onClick={handleCtaClick}
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl"
+            >
+              Solicitar Auditoria Gratuita
             </Button>
-          </a>
+          </div>
         </div>
       )}
     </header>

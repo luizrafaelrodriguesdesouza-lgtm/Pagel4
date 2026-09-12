@@ -16,9 +16,15 @@ import {
   ShieldCheck,
   Zap,
   UserCheck,
+  MessageSquareCheck,
+  BellRing,
 } from 'lucide-react'
 
-export function DeliveryManagementSection() {
+interface DeliveryManagementSectionProps {
+  onOpenAudit?: () => void
+}
+
+export function DeliveryManagementSection({ onOpenAudit }: DeliveryManagementSectionProps = {}) {
   const [activeDriver, setActiveDriver] = useState('Motoboy01')
   const [activeRole, setActiveRole] = useState<'gestor' | 'entregador'>('entregador')
 
@@ -82,6 +88,54 @@ export function DeliveryManagementSection() {
               Detalhamento de pagamento (Pix, Cartão, Dinheiro) e contato via WhatsApp para
               confirmação do cliente instantânea.
             </p>
+          </div>
+        </div>
+
+        {/* Customer Sofa Journey - Comfort & Delight */}
+        <div className="mb-12 bg-white border border-emerald-100 rounded-3xl p-6 md:p-8 shadow-sm">
+          <div className="max-w-2xl mb-6">
+            <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">
+              A jornada do cliente no sofá
+            </span>
+            <h3 className="text-2xl font-bold text-slate-900 mt-1">
+              Conforto e transparência do início ao fim
+            </h3>
+            <p className="text-slate-600 text-sm mt-1">
+              Seu cliente nunca mais precisará perguntar "onde está meu remédio?". A automação
+              mantém ele informado com mensagens gentis nos momentos exatos.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+            <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <BellRing className="w-5 h-5" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-emerald-700 uppercase">Em trânsito</span>
+                <p className="text-sm font-semibold text-slate-900">
+                  "Seu pedido saiu para entrega e a próxima parada é a sua casa! 🛵"
+                </p>
+                <p className="text-xs text-slate-500">
+                  Notificação com nome do entregador e estimativa de chegada sem stress.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <MessageSquareCheck className="w-5 h-5" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-emerald-700 uppercase">Pós-entrega</span>
+                <p className="text-sm font-semibold text-slate-900">
+                  "Como foi sua experiência com a entrega hoje? Conte para nós em 1 clique ⭐"
+                </p>
+                <p className="text-xs text-slate-500">
+                  Pesquisa de satisfação imediata que fortalece a fidelização e reputação.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -278,16 +332,26 @@ export function DeliveryManagementSection() {
             </div>
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/entregas">
               <Button
                 size="lg"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-6 rounded-2xl shadow-lg shadow-emerald-600/25 text-base gap-3 hover:scale-105 active:scale-95 transition-all"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-6 rounded-2xl shadow-lg shadow-emerald-600/25 text-base gap-3 hover:scale-105 active:scale-95 transition-all w-full sm:w-auto"
               >
                 Acessar o Painel de Gestão de Entregas em Tempo Real
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
+            {onOpenAudit && (
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={onOpenAudit}
+                className="border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold px-6 py-6 rounded-2xl text-base w-full sm:w-auto"
+              >
+                Quero implantar na minha farmácia
+              </Button>
+            )}
           </div>
         </div>
       </div>

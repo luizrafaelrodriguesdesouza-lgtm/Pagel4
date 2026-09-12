@@ -6,55 +6,70 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
-export function FaqSection() {
+interface FaqSectionProps {
+  onOpenAudit?: () => void
+}
+
+export function FaqSection({ onOpenAudit }: FaqSectionProps = {}) {
   const { ref, isVisible } = useScrollAnimation()
 
   const faqs = [
     {
-      question: 'Os meus dados estão seguros?',
+      question: 'Existe risco do meu número de WhatsApp ser banido?',
       answer:
-        'Sim! Utilizamos o n8n e as melhores práticas de segurança do mercado. Todos os fluxos operam com criptografia de ponta a ponta e seguimos rígidos protocolos de confidencialidade para garantir que os dados da sua empresa e dos seus clientes permaneçam totalmente protegidos.',
+        'Não! Diferente de disparadores em massa e extensões piratas que dependem de leitura de QR Code em celulares, operamos exclusivamente com a API Oficial da Meta (WhatsApp Business Cloud API). Sua farmácia fica 100% regularizada e imune a bloqueios.',
     },
     {
-      question: 'Quanto tempo leva a implementação?',
+      question: 'A IA substitui meus balconistas ou trabalha com eles?',
       answer:
-        'Nosso processo utiliza metodologia ágil. O tempo de implementação varia conforme a complexidade do fluxo, mas uma automação padrão de atendimento e qualificação costuma estar rodando em produção em poucos dias, garantindo um ROI rápido para sua operação.',
+        'Ela trabalha em conjunto. A IA assume a triagem inicial (saudação imediata, endereço, itens e receita) e organiza os dados. Quando o cliente está pronto ou pede atendimento humano, o chamado cai diretamente na tela do seu balconista com todo o contexto pronto.',
     },
     {
-      question: 'Quais ferramentas vocês utilizam?',
+      question: 'Como funciona a gestão de entregas e motoboys?',
       answer:
-        'Somos especialistas na orquestração de sistemas. Nossas principais stacks incluem n8n, Make, OpenAI, Anthropic (Claude), além da integração nativa com o seu CRM (HubSpot, Pipedrive, Kommo) e plataformas de comunicação (WhatsApp, Instagram, Telegram).',
+        'Você conta com um painel Kanban em tempo real para despachar pedidos. O motoboy visualiza a rota e dados do cliente, enquanto o cliente recebe no WhatsApp alertas automáticos ("sua entrega é a próxima") e pesquisa de satisfação pós-entrega.',
+    },
+    {
+      question: 'Quanto tempo leva para colocar a operação no ar?',
+      answer:
+        'Por utilizarmos fluxos já homologados para farmácias e drogarias, a ativação e configuração da API Oficial costumam levar poucos dias úteis, sem interromper o atendimento atual da sua loja.',
     },
   ]
 
   return (
-    <section id="faq" className="py-24 bg-zinc-950 border-t border-border/20">
+    <section
+      id="faq"
+      className="py-20 md:py-28 bg-slate-50/70 border-t border-slate-200/80 text-slate-900"
+    >
       <div
         ref={ref}
         className={`container px-4 mx-auto max-w-3xl transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-            Dúvidas <span className="text-primary">Frequentes</span>
+        <div className="text-center mb-14 space-y-3">
+          <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
+            Tire Suas Dúvidas
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
+            Perguntas Frequentes
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Tudo o que você precisa saber sobre como escalamos sua operação.
+          <p className="text-slate-600 text-base md:text-lg">
+            Respostas diretas sobre segurança, implementação e rotina da sua equipe.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border border-border/50 rounded-lg px-6 bg-zinc-900/50 data-[state=open]:bg-zinc-900 data-[state=open]:border-primary/50 transition-colors"
+              className="border border-slate-200 rounded-xl px-5 bg-white data-[state=open]:border-emerald-300 shadow-2xs transition-colors"
             >
-              <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline py-6">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 text-base md:text-lg hover:no-underline py-5 hover:text-emerald-700">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+              <AccordionContent className="text-slate-600 text-sm md:text-base leading-relaxed pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
